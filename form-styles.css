@@ -1,0 +1,92 @@
+
+.login-form {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -65%);
+    background-color: #ff4d4d;
+    border-radius: 40px;
+
+
+}
+
+.login,
+.actual-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+
+}
+
+.login h1 {
+    font-size: 48px;
+    line-height: 56px;
+    padding: 30px;
+}
+
+.login hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.actual-form {
+    margin: 40px;
+    font-size: 20px;
+}
+
+
+input[type=email],
+input[type=password] {
+    height: 40px;
+    line-height: 1.5rem;
+    width: 175%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+label {
+
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 6px;
+    margin-left: -150px;
+}
+
+.actual-form .links {
+    display: block;
+
+    padding-left: 0 auto;
+
+}
+
+
+.actual-form .links a {
+	text-align: left;
+    text-decoration: none;
+    color: black;
+    float: left;
+
+}
+
+#submit {
+	padding: 10px 30px;
+	margin-top: 5px;
+	background-color: black;
+	outline: none;
+	border: none;
+	color: white;
+	font-size: 1.8rem;
+	font-weight: 300;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 1px -1px 6px -1px rgba(255,255,255,0.7);
+
+}

@@ -71,11 +71,14 @@
 
 }
 #intro {
+	position: relative;
 	width: 80vw;
 	padding: 40px;
 	margin: 40px auto;
-	box-shadow: 2px -2px 35px -1px rgba(140,140,140,1);
+	box-shadow: 2px -2px 35px -1px rgba(140,140,140,0.4);
 	border-radius: 20px;
+	z-index: -1;
+	
 }
 .wrapper {
 	display: flex;
@@ -91,6 +94,8 @@
 	align-items: center;
 	flex-flow: column nowrap;
 	width: 50%;
+	
+	
 }
 
 .wrapper .first-svg {
@@ -100,5 +105,7 @@
 hr {
 	width: 70%;
 	margin: auto;
-	border-top: 2px solid grey;
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
