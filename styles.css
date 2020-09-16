@@ -70,16 +70,19 @@
 	max-height: 70% !important;
 
 }
-
+#intro {
+	width: 80vw;
+	padding: 40px;
+	margin: 40px auto;
+	box-shadow: 2px -2px 35px -1px rgba(140,140,140,1);
+	border-radius: 20px;
+}
 .wrapper {
 	display: flex;
 	justify-content: space-around;
 	//align-items: center;
 	flex-flow: row wrap;
-	width: 80vw;
 	padding: 40px;
-	margin: 40px auto;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .intro-description {
@@ -94,3 +97,8 @@
 	flex-order: 3;
 }
 
+hr {
+	width: 70%;
+	margin: auto;
+	border-top: 2px solid grey;
+}
