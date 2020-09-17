@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Login Page</title>
+    <title>Login V3</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="form-styles.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-
 <body>
+    <div id="site-wrapper">
     <section id="navbar">
         <div class="logo-container">
             <div class="logo"><img src="images/logo1.png"></div>
@@ -22,27 +21,46 @@
             </ul>
         </nav>
     </section>
-    <section class="login-form">
-        <div class="login">
-    <h1>Sign-In</h1>
-    <hr>
-    <form class="actual-form">
-        
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="abc@example.com">
-        
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Password">
-        <div class="links">
-            <a href="#">Forgot Password?</a><br>
-            <a href="#">Register Here</a>
+    
+    <div class="limiter">
+        <div class="container-form">
+            <div class="wrap-form">
+                <form class="form-form validate-form">
+
+                    <span class="form-form-title">
+                        Log in
+                    </span>
+
+                    <div class="wrap-field">
+                        <input class="field" type="text" name="username" placeholder="Username">
+                        <span class="focus-field"></span>
+                    </div>
+
+                    <div class="wrap-field">
+                        <input class="field" type="password" name="pass" placeholder="Password">
+                        <span class="focus-field"></span>
+                    </div>
+
+                    <div class="container-form-form-btn">
+                        <button class="form-form-btn">
+                            Login
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <a class="txt1" href="#">
+                            Forgot Password?
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <a class="txt1" href="#">
+                            Register Now!
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
-            <input type="submit" id="submit" value="Login">
-        
-
-    </form>
-</div>
-    </section>
+    </div>
+    </div>
 </body>
-
 </html>
