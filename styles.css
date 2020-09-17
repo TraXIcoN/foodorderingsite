@@ -68,7 +68,8 @@ hr {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .slides::-webkit-scrollbar {
@@ -95,22 +96,12 @@ hr {
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
 }
-
-.slides>div::before {
-    content: open-quote;
-}
-
-.slides>div::before {
-    content: close-quote;
-}
-
 .slider>a {
     display: inline-flex;
     width: 1.5rem;
