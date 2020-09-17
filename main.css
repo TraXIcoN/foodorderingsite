@@ -12,13 +12,12 @@
 body, html {
 	height: 100%;
 }
-a {
+/*a {
 	font-size: 14px;
-	line-height: 1.7;
+	
 	color: white;
 	margin: 0px;
-	transition: all 0.4s;
-}
+	}
 
 a:focus {
 	outline: none !important;
@@ -27,7 +26,7 @@ a:focus {
 a:hover {
 	text-decoration: none;
   color: #fff;
-}
+}*/
 
 
 input {
@@ -222,9 +221,13 @@ button:hover {
 }
 
 .form-form-btn:hover {
-  color: #fff;
-}
+  color: black;
+  
 
+}
+.form-form-btn:focus{
+  border: none;
+}
 .form-form-btn:hover:before {
   opacity: 0;
 }
