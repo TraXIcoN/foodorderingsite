@@ -1,17 +1,20 @@
-
-
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
-#site-wrapper{
-  background-image: url("images/formsback.png");
-  background-repeat: round;
+
+#site-wrapper {
+    background-image: url("images/formsback.png");
+    background-repeat: round;
 }
-body, html {
-	height: 100%;
+
+body,
+html {
+    height: 100%;
 }
+
+
 /*a {
 	font-size: 14px;
 	line-height: 1.7;
@@ -28,207 +31,201 @@ a:hover {
   color: #fff;
 }*/
 
-
 input {
-	outline: none;
-	border: none;
+    outline: none;
+    border: none;
 }
 
 label {
-  margin: 0;
-  display: block;
+    margin: 0;
+    display: block;
 }
 
+
 /*---------------------------------------------*/
+
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+    outline: none !important;
+    border: none;
+    background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .txt1 {
-  font-size: 20px;
-  color: black;
+    font-size: 20px;
+    color: black;
 }
 
-
 .limiter {
-  width: 100%;
-  margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .container-form {
-  width: 100%;  
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;  
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
 .container-form::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .wrap-form {
-  width: 500px;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 55px 55px 37px 55px;
-  background: #ff4d4d;
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 55px 37px 55px;
+    background: #ff4d4d;
 }
-
 
 .form-form {
-  width: 100%;
+    width: 100%;
 }
-
 
 .form-form-title {
-  font-size: 30px;
-  color: black;
-  line-height: 1.2;
-  text-align: center;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-  border-bottom: 5px solid;
-  display: block;
+    font-size: 30px;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-bottom: 5px solid;
+    display: block;
 }
 
-
 .wrap-field {
-  margin-top: 30px;
-  width: 100%;
-  position: relative;
-  border-bottom: 2px solid rgba(255,255,255,0.24);
-  margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+    margin-bottom: 30px;
 }
 
 .field {
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.2;
-  display: block;
-  width: 100%;
-  height: 45px;
-  background: transparent;
-  padding: 0 5px 0 38px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px 0 38px;
 }
 
 .focus-field {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
 .focus-field::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  transition: all 0.4s;
-  background: black;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: black;
 }
 
-::placeholder{
-  color: black
+::placeholder {
+    color: black;
+    transition: all 1s;
 }
+
 .focus-field::after {
-  font-size: 22px;
-  color: #fff;
-  content:"";
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 6px;
-  left: 0px;
-  padding-left: 5px;
-  transition: all 0.4s;
+    font-size: 22px;
+    color: #fff;
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
 }
 
 .field:focus {
-  padding-left: 5px;
+    padding-left: 5px;
 }
 
-.field:focus + .focus-field::after {
-  top: -22px;
-  font-size: 18px;
+.field:focus+.focus-field::after {
+    top: -22px;
+    font-size: 18px;
 }
 
-.field:focus + .focus-field::before {
-  width: 100%;
+.field:focus+.focus-field::before {
+    width: 100%;
 }
 
 .container-form-form-btn {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .form-form-btn {
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  min-width: 120px;
-  height: 50px;
-  background: #ff4d4d;
-  position: relative;
-  z-index: 1;
-  transition: all 0.4s;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 120px;
+    height: 50px;
+    background: #ff4d4d;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s;
 }
 
 .form-form-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  background-color: black;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  transition: all 0.4s;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: black;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all 0.4s;
 }
 
 .form-form-btn:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .form-form-btn:hover:before {
-  opacity: 0;
+    opacity: 0;
 }
-
-
-
-
-
