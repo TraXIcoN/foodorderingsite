@@ -14,7 +14,7 @@ body, html {
 }
 /*a {
 	font-size: 14px;
-	
+	line-height: 1.7;
 	color: white;
 	margin: 0px;
 	}
@@ -221,13 +221,9 @@ button:hover {
 }
 
 .form-form-btn:hover {
-  color: black;
-  
+  color: #fff;
+}
 
-}
-.form-form-btn:focus{
-  border: none;
-}
 .form-form-btn:hover:before {
   opacity: 0;
 }
