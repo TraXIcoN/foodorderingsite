@@ -183,3 +183,7 @@ hr {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
+.inner-footer i {
+    padding-right: 12px;
+}
