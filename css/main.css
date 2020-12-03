@@ -16,18 +16,18 @@ html {
 
 
 /*a {
-	font-size: 14px;
-	line-height: 1.7;
-	color: white;
-	margin: 0px;
-	}
+    font-size: 14px;
+    line-height: 1.7;
+    color: white;
+    margin: 0px;
+    }
 
 a:focus {
-	outline: none !important;
+    outline: none !important;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
   color: #fff;
 }*/
 
@@ -201,31 +201,47 @@ button:hover {
     padding: 0 20px;
     min-width: 120px;
     height: 50px;
-    background: #ff4d4d;
+    border-radius: 25px;
+    background-color: black;
+
     position: relative;
     z-index: 1;
     transition: all 0.4s;
+    outline: none !important;
+    border: none !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
-.form-form-btn::before {
+/*.form-form-btn::before {
     content: "";
     display: block;
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100%;
-    border-radius: 25px;
-    background-color: black;
+    
     top: 0;
     left: 0;
     opacity: 1;
     transition: all 0.4s;
+    border: none !important;
+    outline: none !important;
 }
-
+*/
 .form-form-btn:hover {
     color: #fff;
+    border: 2px solid black;
+    outline: none !important;
 }
 
-.form-form-btn:hover:before {
+
+
+/*.form-form-btn:hover:before {
     opacity: 0;
+
+}*/
+
+.txt1 {
+    font-size: 0.9em;
 }
