@@ -19,11 +19,11 @@
         </div>
         <nav id="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="menu.php">Menu</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="cart.html">Catering</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.php">Catering</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
         <div class="collapsible-menu">
