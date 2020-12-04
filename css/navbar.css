@@ -23,16 +23,6 @@
     z-index: 50;
 }
 
-@media screen and (max-width: 920px) {
-  #nav {
-    display: none
-  }
-}
-@media screen and (min-width: 920px) {
-    .collapsible-menu{
-        display: none;
-    }
-}
 #nav {
     height: 60px;
     width: 80%;
@@ -41,12 +31,10 @@
     position: absolute;
     top: 55px;
     right: 0px;
-    border: 3px solid white;
     //overflow: hidden;
 }
 
 #nav ul {
-    background-color: #ff4d4d;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -83,72 +71,3 @@
     border-bottom: 4px solid white;
     transition: all 0.3s;
 }
-
-
-/*////////////////////*/
-.menu-content {
-    max-height: 0;    
-    background-color: #ff4d4d;
-    width: 100%;
-    border-radius: 30px 0px 0px 30px;
-    position: absolute;
-    overflow: hidden;
-    border: 3px solid white;
-}
-.collapsible-menu {
-    background-color: #ff4d4d;
-    padding: 0px 30px;
-    border-bottom: 3px solid white;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-}
-.collapsible-menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-.collapsible-menu a {
-    display:block;
-    padding: 10px;
-    text-decoration: none;
-}
-.collapsible-menu label {
-    font-size: 56px;
-    display: block;
-    cursor: pointer;
-    background: url("../images/cutlery.png") no-repeat left center;
-    padding: 10px 0 10px 50px;
-    background-size: 40px
-}
-input#menu {
-    display: none;
-}
-input:checked +label {
-    background-image: url("../images/cutlery.png");
-}
-/* Toggle Effect */
-input:checked ~ label {
-    background-image: url("../images/cutlery.png");
-}
-input:checked ~ .menu-content {
-    max-height: fit-content;
-}
-
-
-.menu-content li a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.5em;
-    line-height: 1.5;
-    font-weight: 500;
-}
-
-.menu-content a:hover {
-    color: white;
-    border-bottom: 4px solid white;
-    transition: all 0.3s ease 0s;
-}
-
-.menu-content a:active {
-    color: white;
-    border-bottom: 4px solid white;
-    transition: all 0.3s;
-/*//////////////////*/
