@@ -3,12 +3,15 @@
 
 <head>
     <title>Cards</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
 
@@ -31,9 +34,9 @@
             <div class="menu-content">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>                    
-                    <!--<li><a href="cart.html">Catering</a></li>-->
+                    <li><a href="menu.html">Menu</a></li>
                     <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -46,11 +49,11 @@
             </div>
         </div>
     </section>
-    <div class="img_with_cards">
-        <img src="../images/daily specials.png">
-        <div class="main_cards">
+    <div class="container card-back">
+        <img class="imggg" src="images/daily specials.png">
+        <div class="row">
             <!--1st card-->
-            <div class="card">
+            <div class="col card">
                 <div class="image">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
                 </div>
@@ -63,7 +66,7 @@
                 </div>
             </div>
             <!--2nd card-->
-            <div class="card">
+            <div class="col card">
                 <div class="image">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
                 </div>
@@ -76,7 +79,7 @@
                 </div>
             </div>
             <!--3rd card-->
-            <div class="card">
+            <div class="col card">
                 <div class="image">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
                 </div>
@@ -89,7 +92,7 @@
                 </div>
             </div>
             <!--4th card-->
-            <div class="card">
+            <div class="col card">
                 <div class="image">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
                 </div>
@@ -101,9 +104,9 @@
                     <button>Read More...</button>
                 </div>
             </div>
-            <div class="center_cards">
+            <div class="row">
                 <!--5th card-->
-                <div class="card">
+                <div class="col card">
                     <div class="image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
                     </div>
@@ -116,7 +119,7 @@
                     </div>
                 </div>
                 <!--6th card-->
-                <div class="card">
+                <div class="col card">
                     <div class="image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
                     </div>
@@ -129,7 +132,7 @@
                     </div>
                 </div>
                 <!--7th card-->
-                <div class="card">
+                <div class="col card">
                     <div class="image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
                     </div>
@@ -143,7 +146,7 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
     <footer class="review">
         <h3>Reviews!!</h3>
     </footer>
