@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+    <style type="text/css">
+        .card-back{
+            background-image: url("images/daily specials.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -50,7 +58,6 @@
         </div>
     </section>
     <div class="container card-back">
-        <img class="imggg" src="images/daily specials.png">
         <div class="row">
             <!--1st card-->
             <div class="col card">

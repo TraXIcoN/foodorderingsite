@@ -44,6 +44,11 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <style type="text/css">
+        #site-wrapper{
+            background-image: url("images/formsback.png");
+        }
+    </style>
 </head>
 
 <body>
