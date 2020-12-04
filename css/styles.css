@@ -179,23 +179,12 @@ hr {
     padding-right: 12px;
 }
 
-#img_container {
-    position:relative;
-    display:inline-block;
-    text-align:center;
-    border:1px solid red;
-    background-color:gray;
-}
 
-.button {
-    position:absolute;
-    bottom:50%;
-    right:50%;
-    width:100px;
-    height:30px;
-margin:0px -50px -15px 0px;
-}
-.resize {
-    width:300px;
-    height:200px;
+
+/*********************************************************/
+
+#_1 {
+    background-image: url("../images/formsback.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
