@@ -53,19 +53,31 @@
 
 <body>
     <div id="site-wrapper">
-        <section id="navbar">
-            <div class="logo-container">
-                <div class="logo"><img src="images/logo1.png"></div>
-            </div>
-            <nav id="nav">
+    <section id="navbar">
+        <div class="logo-container">
+            <div class="logo"><img src="images/logo1.png"></div>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+        <div class="collapsible-menu">
+            <input type="checkbox" id="menu">
+            <label for="menu">... </label>
+            <div class="menu-content">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="menu.php">Menu</a></li>
-                    <li><a href="forms.php">Login</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="login.html">Login</a></li>
                     <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
-            </nav>
-        </section>
+            </div>
+        </div>
+    </section>
 
         <div class="limiter">
             <div class="container-form">

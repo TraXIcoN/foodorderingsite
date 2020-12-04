@@ -11,6 +11,51 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <style type="text/css">
+        .hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/caro21.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1,p{
+    padding: 10px;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ff4d4d;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+    </style>
 </head>
 
 <body>
@@ -26,11 +71,29 @@
                 <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
+        <div class="collapsible-menu">
+            <input type="checkbox" id="menu">
+            <label for="menu">... </label>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <div class="container resize" id="img_container">
-        <img class="caro-img" src="images/caro21.jpg">
-        <button class="btn button"><a href="register.php">Register</a></button>
+        <div class="hero-image caro-">
+            <img class="caro-img" src="images/caro21.jpg">
+            <div class="hero-text">
+            <h1 style="font-size:50px">I am John Doe</h1>
+            <p>And I'm a Photographer</p>
+            <button><a href="register.php">Register</a></button>
+        </div>
+    </div>
     </div>
     <section id="intro">
         <div class="wrapper">

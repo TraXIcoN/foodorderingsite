@@ -26,7 +26,7 @@
 <body>
     <section id="navbar">
         <div class="logo-container">
-            <div class="logo"><img src="../images/logo1.png"></div>
+            <div class="logo"><img src="images/logo1.png"></div>
         </div>
         <nav id="nav">
             <ul>

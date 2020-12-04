@@ -61,6 +61,18 @@
                 <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
+        <div class="collapsible-menu">
+            <input type="checkbox" id="menu">
+            <label for="menu">... </label>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </section>
     <br><br>
     <div class="limiter">

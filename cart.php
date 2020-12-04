@@ -30,9 +30,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="cart.html">Catering</a></li>
                     <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
         </div>
