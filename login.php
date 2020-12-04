@@ -40,6 +40,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -55,9 +56,8 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="menu.php">Menu</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Catering</a></li>
                     <li><a href="forms.php">Login</a></li>
+                    <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </nav>
         </section>
