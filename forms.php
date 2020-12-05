@@ -15,31 +15,30 @@
 
 <body>
     <div id="site-wrapper">
-    <section id="navbar">
-        <div class="logo-container">
-            <div class="logo"><img src="images/logo1.png"></div>
-        </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="menu.php">Menu</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-        </nav>
-        <div class="collapsible-menu">
-            <input type="checkbox" id="menu">
-            <label for="menu">... </label>
-            <div class="menu-content">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">HEAD OVER MEALS</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="menu.php">MENU</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cart.php">CART</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a class="navbut" href="register.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Sign Up</a></li>
+      <li><a class="navbut" href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
+    </ul>
+  </div>
+</nav>
 
         <div class="limiter">
             <div class="container-form">

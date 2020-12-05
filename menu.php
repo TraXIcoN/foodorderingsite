@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Cards</title>
-    
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
+<meta charset="utf-8">
+<title>Tomato Responsive Restaurant HTML5 Template</title>
+
+<script src="/cdn-cgi/apps/head/OkbNSnEV_PNHTKP2_EYPrFNyZ8Q.js"></script><link rel="shortcut icon" href="img/favicon.ico">
+
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -17,20 +20,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <style type="text/css">
-        .card-back{
-            background-image: url("images/daily specials.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="css/menu_main.css">
 </head>
-
 <body>
-<!-- A grey horizontal navbar that becomes vertical on small screens -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="scoket">
+<img src="img/preloader.svg" alt="" />
+</div>
+</div>
+<div class="body">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -54,114 +54,224 @@
     </ul>
   </div>
 </nav>
-    <section id="intro">
-        <div class="wrapper">
-            <div class="intro-description">
-                <h1>Welcome to Head Over Meals</h1>
-                <p>Head Over Meals is the best hassle-free way to order food online. Whether looking for breakfast, lunch, dinner or late night snack, we have it all.</p>
-            </div>
-        </div>
-    </section>
-    <div class="container card-back">
-        <div class="row">
-            <!--1st card-->
-            <div class="col card">
-                <div class="image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-                </div>
-                <div class="title">
-                    <h1>Write title Here</h1>
-                </div>
-                <div class="des">
-                    <p>You can Add Description Here...</p>
-                    <button>Read More...</button>
-                </div>
-            </div>
-            <!--2nd card-->
-            <div class="col card">
-                <div class="image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-                </div>
-                <div class="title">
-                    <h1>Write title Here</h1>
-                </div>
-                <div class="des">
-                    <p>You can Add Description Here...</p>
-                    <button>Read More...</button>
-                </div>
-            </div>
-            <!--3rd card-->
-            <div class="col card">
-                <div class="image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-                </div>
-                <div class="title">
-                    <h1>Write title Here</h1>
-                </div>
-                <div class="des">
-                    <p>You can Add Description Here...</p>
-                    <button>Read More...</button>
-                </div>
-            </div>
-            <!--4th card-->
-            <div class="col card">
-                <div class="image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-                </div>
-                <div class="title">
-                    <h1>Write title Here</h1>
-                </div>
-                <div class="des">
-                    <p>You can Add Description Here...</p>
-                    <button>Read More...</button>
-                </div>
-            </div>
-            <div class="row">
-                <!--5th card-->
-                <div class="col card">
-                    <div class="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-                    </div>
-                    <div class="title">
-                        <h1>Write title Here</h1>
-                    </div>
-                    <div class="des">
-                        <p>You can Add Description Here...</p>
-                        <button>Read More...</button>
-                    </div>
-                </div>
-                <!--6th card-->
-                <div class="col card">
-                    <div class="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-                    </div>
-                    <div class="title">
-                        <h1>Write title Here</h1>
-                    </div>
-                    <div class="des">
-                        <p>You can Add Description Here...</p>
-                        <button>Read More...</button>
-                    </div>
-                </div>
-                <!--7th card-->
-                <div class="col card">
-                    <div class="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-                    </div>
-                    <div class="title">
-                        <h1>Write title Here</h1>
-                    </div>
-                    <div class="des">
-                        <p>You can Add Description Here...</p>
-                        <button>Read More...</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
-    <footer class="review">
-        <h3>Reviews!!</h3>
-    </footer>
-</body>
 
+<section class="page_header">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<h2 class="text-uppercase">Menu</h2>
+<p>...</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="menu menu2">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="page-header wow fadeInDown">
+<h1>Overlay<small>These fine folks trusted the award winning restaurant.</small></h1>
+</div>
+</div>
+</div>
+<div class="food-menu wow fadeInUp">
+<div class="row">
+<div class="col-md-12">
+<div class="menu-tags2">
+<span data-filter="*" class="tagsort2-active">All</span>
+<span data-filter=".starter">starters</span>
+<span data-filter=".breakfast">breakfast</span>
+<span data-filter=".lunch">lunch</span>
+<span data-filter=".dinner">dinner</span>
+<span data-filter=".desserts">desserts</span>
+</div>
+</div>
+</div>
+<div class="row menu-items2">
+<div class="menu-item2 col-sm-4 col-xs-12 starter dinner desserts clearfix">
+<div class="menu-info">
+<img src="img/menu/1/1.jpg" class="img-responsive" alt="" />
+<a href="./menu_all.html">
+<div class="menu2-overlay">
+<h4>English-Asparagus</h4>
+<p>Asparagus, hens egg, toasted
+<br>sunflower seeds, Spenwood cheese</p>
+<span class="price">$ 14.95</span>
+</div>
+</a>
+</div>
+<a href="./menu_all.html" class="menu-more">+</a>
+</div>
+<div class="menu-item2 col-sm-4 col-xs-12 starter clearfix">
+<div class="menu-info">
+<img src="img/menu/1/2.jpg" class="img-responsive" alt="" />
+<a href="./menu_all.html">
+<div class="menu2-overlay">
+<h4>English-Asparagus</h4>
+<p>Asparagus, hens egg, toasted
+<br>sunflower seeds, Spenwood cheese</p>
+<span class="price">$ 14.95</span>
+</div>
+</a>
+</div>
+<a href="./menu_all.html" class="menu-more">+</a>
+</div>
+<div class="menu-item2 col-sm-4 col-xs-12 breakfast desserts starter clearfix">
+<div class="menu-info">
+<img src="img/menu/1/3.jpg" class="img-responsive" alt="" />
+<a href="./menu_all.html">
+<div class="menu2-overlay">
+<h4>English-Asparagus</h4>
+<p>Asparagus, hens egg, toasted
+<br>sunflower seeds, Spenwood cheese</p>
+<span class="price">$ 14.95</span>
+</div>
+</a>
+</div>
+<a href="./menu_all.html" class="menu-more">+</a>
+</div>
+<div class="menu-item2 col-sm-4 col-xs-12 breakfast clearfix">
+<div class="menu-info">
+<img src="img/menu/1/4.jpg" class="img-responsive" alt="" />
+<a href="./menu_all.html">
+<div class="menu2-overlay">
+<h4>English-Asparagus</h4>
+<p>Asparagus, hens egg, toasted
+<br>sunflower seeds, Spenwood cheese</p>
+<span class="price">$ 14.95</span>
+</div>
+</a>
+</div>
+<a href="./menu_all.html" class="menu-more">+</a>
+</div>
+<div class="menu-item2 col-sm-4 col-xs-12 lunch starter breakfast clearfix">
+<div class="menu-info">
+<img src="img/menu/1/5.jpg" class="img-responsive" alt="" />
+<a href="./menu_all.html">
+<div class="menu2-overlay">
+<h4>English-Asparagus</h4>
+<p>Asparagus, hens egg, toasted
+<br>sunflower seeds, Spenwood cheese</p>
+<span class="price">$ 14.95</span>
+</div>
+</a>
+</div>
+<a href="./menu_all.html" class="menu-more">+</a>
+</div>
+<div class="menu-item2 col-sm-4 col-xs-12 lunch clearfix">
+<div class="menu-info">
+<img src="img/menu/1/6.jpg" class="img-responsive" alt="" />
+<a href="./menu_all.html">
+<div class="menu2-overlay">
+<h4>English-Asparagus</h4>
+<p>Asparagus, hens egg, toasted
+<br>sunflower seeds, Spenwood cheese</p>
+<span class="price">$ 14.95</span>
+</div>
+</a>
+</div>
+<a href="./menu_all.html" class="menu-more">+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-12">
+<h1>About us</h1>
+<p>Duis leo justo, condimentum at purus eu,Aenean sed dolor sem. Etiam massa libero, auctor vitae egestas et, accumsan quis nunc.Duis leo justo, condimentum at purus eu, posuere pretium tellus.</p>
+<a href="./about.html">Read more &rarr;</a>
+</div>
+<div class="col-md-4  col-sm-6">
+<h1>Recent post</h1>
+<div class="footer-blog clearfix">
+<a href="./blog_right_sidebar.html">
+<img src="img/thumb8.png" class="img-responsive footer-photo" alt="blog photos">
+<p class="footer-blog-text">Hand picked ingredients for our best customers</p>
+<p class="footer-blog-date">29 may 2015</p>
+</a>
+</div>
+<div class="footer-blog clearfix last">
+<a href="./blog_right_sidebar.html">
+<img src="img/thumb9.png" class="img-responsive footer-photo" alt="blog photos">
+<p class="footer-blog-text">Daily special foods that you will going to love</p>
+<p class="footer-blog-date">29 may 2015</p>
+</a>
+</div>
+</div>
+<div class="col-md-4  col-sm-6">
+<h1>Reach us</h1>
+<div class="footer-social-icons">
+<a href="https://www.facebook.com">
+<i class="fa fa-facebook-square"></i>
+</a>
+<a href="https://www.twitter.com">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="https://plus.google.com">
+<i class="fa fa-google"></i>
+</a>
+ <a href="https://www.youtube.com">
+<i class="fa fa-youtube-play"></i>
+</a>
+<a href="https://www.vimeo.com">
+<i class="fa fa-vimeo"></i>
+</a>
+<a href="https://www.pinterest.com">
+<i class="fa fa-pinterest-p"></i>
+</a>
+<a href="http://www.linkedin.com">
+<i class="fa fa-linkedin"></i>
+</a>
+</div>
+<div class="footer-address">
+<p><i class="fa fa-map-marker"></i>28 Seventh Avenue, Neew York, 10014</p>
+<p><i class="fa fa-phone"></i>Phone: (415) 124-5678</p>
+<p><i class="fa fa-envelope-o"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81f2f4f1f1eef3f5c1f3e4f2f5e0f4f3e0eff5afe2eeec">[email&#160;protected]</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyrights">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p><i class="fa fa-copyright"></i> 2015.Tomato.All rights reserved. Designed with <i class="fa fa-heart primary-color"></i> by Surjithctly</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/jquery.flexslider-min.js"></script>
+<script src="js/vendor/spectragram.js"></script>
+<script src="js/vendor/owl.carousel.min.js"></script>
+<script src="js/vendor/velocity.min.js"></script>
+<script src="js/vendor/velocity.ui.min.js"></script>
+<script src="js/vendor/bootstrap-datepicker.min.js"></script>
+<script src="js/vendor/bootstrap-clockpicker.min.js"></script>
+<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="js/vendor/isotope.pkgd.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/vendor/wow.min.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/vendor/vegas/vegas.min.js"></script>
+<script src="js/vendor/jquery.mb.YTPlayer.js"></script>
+<script src="js/vendor/jquery.stellar.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vendor/mc/jquery.ketchup.all.min.js"></script>
+<script src="js/vendor/mc/main.js"></script>
+</body>
 </html>

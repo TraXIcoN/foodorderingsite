@@ -56,7 +56,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -81,7 +81,7 @@
   </div>
 </nav>
     <br><br>
-    <div class="limiter">
+    <div class="limiter" style="background-image: url(images/formsback.png); background-repeat: no-repeat; background-size: cover;">
         <div class="container-form">
             <div class="wrap-form">
                 <form class="form-form validate-form" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
