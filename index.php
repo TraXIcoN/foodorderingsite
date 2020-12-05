@@ -20,6 +20,7 @@
         .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/caro21.jpg");
   height: 50%;
+  width: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,7 +145,7 @@
         <div class="inner-footer">
             <div class="about-us">
                 <h3>About</h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna
+                <p class="text-justify" style="margin-left: -15px; margin-right: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna
                     iaculis, pretium nulla sit amet, efficitur tellus. </p>
             </div>
             <div class="quick-links">
