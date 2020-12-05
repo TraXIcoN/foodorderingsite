@@ -89,8 +89,7 @@
         <div class="hero-image caro-">
             <img class="caro-img" src="images/caro21.jpg">
             <div class="hero-text">
-            <h1 style="font-size:50px">I am John Doe</h1>
-            <p>And I'm a Photographer</p>
+            <h1 style="font-size:50px">WANT TO SELL FOOD!</h1>
             <button><a href="register.php">Register</a></button>
         </div>
     </div>
