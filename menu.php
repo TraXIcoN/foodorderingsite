@@ -9,6 +9,8 @@
 <meta name="viewport" content="width=device-width">
 
 <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -179,77 +181,33 @@
 </div>
 </section>
 
-<section class="footer">
-<div class="container">
-<div class="row">
-<div class="col-md-4 col-sm-12">
-<h1>About us</h1>
-<p>Duis leo justo, condimentum at purus eu,Aenean sed dolor sem. Etiam massa libero, auctor vitae egestas et, accumsan quis nunc.Duis leo justo, condimentum at purus eu, posuere pretium tellus.</p>
-<a href="./about.html">Read more &rarr;</a>
-</div>
-<div class="col-md-4  col-sm-6">
-<h1>Recent post</h1>
-<div class="footer-blog clearfix">
-<a href="./blog_right_sidebar.html">
-<img src="img/thumb8.png" class="img-responsive footer-photo" alt="blog photos">
-<p class="footer-blog-text">Hand picked ingredients for our best customers</p>
-<p class="footer-blog-date">29 may 2015</p>
-</a>
-</div>
-<div class="footer-blog clearfix last">
-<a href="./blog_right_sidebar.html">
-<img src="img/thumb9.png" class="img-responsive footer-photo" alt="blog photos">
-<p class="footer-blog-text">Daily special foods that you will going to love</p>
-<p class="footer-blog-date">29 may 2015</p>
-</a>
-</div>
-</div>
-<div class="col-md-4  col-sm-6">
-<h1>Reach us</h1>
-<div class="footer-social-icons">
-<a href="https://www.facebook.com">
-<i class="fa fa-facebook-square"></i>
-</a>
-<a href="https://www.twitter.com">
-<i class="fa fa-twitter"></i>
-</a>
-<a href="https://plus.google.com">
-<i class="fa fa-google"></i>
-</a>
- <a href="https://www.youtube.com">
-<i class="fa fa-youtube-play"></i>
-</a>
-<a href="https://www.vimeo.com">
-<i class="fa fa-vimeo"></i>
-</a>
-<a href="https://www.pinterest.com">
-<i class="fa fa-pinterest-p"></i>
-</a>
-<a href="http://www.linkedin.com">
-<i class="fa fa-linkedin"></i>
-</a>
-</div>
-<div class="footer-address">
-<p><i class="fa fa-map-marker"></i>28 Seventh Avenue, Neew York, 10014</p>
-<p><i class="fa fa-phone"></i>Phone: (415) 124-5678</p>
-<p><i class="fa fa-envelope-o"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81f2f4f1f1eef3f5c1f3e4f2f5e0f4f3e0eff5afe2eeec">[email&#160;protected]</a></p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="footer-copyrights">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<p><i class="fa fa-copyright"></i> 2015.Tomato.All rights reserved. Designed with <i class="fa fa-heart primary-color"></i> by Surjithctly</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
+    <footer class="footer">
+        <div class="inner-footer">
+            <div class="about-us">
+                <h3>About</h3>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna
+                    iaculis, pretium nulla sit amet, efficitur tellus. </p>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 
 
