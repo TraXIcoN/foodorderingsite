@@ -18,16 +18,21 @@
         // free the $result from memory (good practise)
         mysqli_free_result($result);
         if(!$result) {
-        echo "Wrong Password/Email";
-        }
-        else {
+        echo "Error";
+        } else {
+
+        if($user[0]['c_password']!=null and $password == $user[0]['c_password']) {
             //echo "Logged in!";
             session_start();
             $_SESSION["c_id"]=$user[0]['c_id'];
             $_SESSION["first_name"]=$user[0]['c_fname'];
             echo "User id is ".$user[0]["c_id"]."<br>";
             echo "User name is ".$user[0]['c_fname'];
+        } else {
+            echo "Incorrect password/Email";
         }
+        }
+        
     }
 ?>
 
@@ -95,15 +100,17 @@
                     </span>
 
                         <div class="wrap-field">
-                            <input class="field" type="email" name="email" placeholder="Email Address">
+                            <input class="field" type="email" id="email" name="email" placeholder="Email Address" required>
                             <span class="focus-field"></span>
+                            
                         </div>
-
+                        <div id="emailValid"></div>
                         <div class="wrap-field">
-                            <input class="field" type="password" name="password" placeholder="Password">
+                            <input class="field" type="password" id="password" name="password" placeholder="Password" required>
                             <span class="focus-field"></span>
+                            
                         </div>
-
+                        <div id="passwordValid"></div>
                         <div class="container-form-form-btn">
                             <button class="form-form-btn">
                             Login
@@ -126,5 +133,28 @@
         </div>
     </div>
 </body>
-
+<script type="text/javascript">
+    let email=document.getElementById("email");
+    let password=document.getElementById("password");
+    email.addEventListener("keyup",  function() {
+        const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(!re.test(email.value)) {
+            document.getElementById("emailValid").innerHTML="<p style='color: black; margin: -10px;'>*Enter a proper email address</p>";
+        }
+        else {
+            document.getElementById("emailValid").remove();
+        }
+    })
+    password.addEventListener("keyup",  function() {
+        
+        if(password.value.length<6) {
+            
+            document.getElementById("passwordValid").innerHTML="<p style='color: black;'>*Password must be more than 6 characters.</p>";
+        }
+        else {
+            document.getElementById("passwordValid").remove();
+        }
+        
+    })
+</script>
 </html>
