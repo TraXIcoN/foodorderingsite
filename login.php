@@ -110,7 +110,7 @@
                         </a>
                         </div>
                         <div class="text-center">
-                            <a class="txt1" href="#">
+                            <a class="txt1" href="register.php">
                             Register Now!
                         </a>
                         </div>
