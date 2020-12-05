@@ -138,7 +138,7 @@
                         </a>
                     </div>
                     <div class="text-center">
-                        <a class="txt1" href="#">
+                        <a class="txt1" href="login.php">
                             Login Now!
                         </a>
                     </div>
