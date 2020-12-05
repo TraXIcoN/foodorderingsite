@@ -7,28 +7,25 @@
     if($_SERVER["REQUEST_METHOD"]=='POST') {
         $email=$_POST['email'];
         $password=$_POST['password'];
-
-        $query="SELECT * FROM customer WHERE c_email='{$email}' and c_password='{$password}'";
+        $cpassword=$_POST['cpassword'];
+        if($password==$cpassword) {
+    
+        $query="UPDATE customer SET c_password='{$password}' WHERE c_email='{$email}'";
 
         $result = mysqli_query($conn, $query);
+        if ($result) {
+            echo "Record updated successfully";
+        } else {
+          echo "Error updating record: " . mysqli_error($conn);
+        }
 
-        // fetch the resulting rows as an array
-        $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        // print_r($user);
-        // free the $result from memory (good practise)
-        mysqli_free_result($result);
-        if(!$result) {
-        echo "Wrong Password/Email";
-        }
-        else {
-            //echo "Logged in!";
-            session_start();
-            $_SESSION["c_id"]=$user[0]['c_id'];
-            $_SESSION["first_name"]=$user[0]['c_fname'];
-            echo "User id is ".$user[0]["c_id"]."<br>";
-            echo "User name is ".$user[0]['c_fname'];
-        }
+        mysqli_close($conn);
+        header('Location: login.php');
     }
+    else {
+        echo "Retype password!";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +64,7 @@
         </nav>
         <div class="collapsible-menu">
             <input type="checkbox" id="menu">
-            <label for="menu">... </label>
+            <label for="menu">...</label>
             <div class="menu-content">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -99,13 +96,13 @@
                         </div>
 
                         <div class="wrap-field">
-                            <input class="field" type="password" name="password" placeholder="Confirm Password" required="required">
+                            <input class="field" type="password" name="cpassword" placeholder="Confirm Password" required="required">
                             <span class="focus-field"></span>
                         </div>
 
                         <div class="container-form-form-btn">
                             <button class="form-form-btn">
-                            Done
+                            Update
                         </button>
                         </div>
 
@@ -114,12 +111,7 @@
                             Login
                         </a>
                         </div>
-                        <div class="text-center">
-                            <p>Don't have an account?
-                            <a class="txt1" href="register.php">
-                            Register Now!</a>
-                        </p>
-                        </div>
+                        
                     </form>
                 </div>
             </div>
