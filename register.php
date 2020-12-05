@@ -133,7 +133,7 @@
                     </div>
                     <div class="text-center">
                         <a class="txt1" href="#">
-                            Register Now!
+                            Login Now!
                         </a>
                     </div>
                 </form>
