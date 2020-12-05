@@ -85,34 +85,40 @@
                     <form class="form-form validate-form" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
                         <span class="form-form-title">
-                        Log in
+                        Change Credentials
                     </span>
 
                         <div class="wrap-field">
-                            <input class="field" type="email" name="email" placeholder="Email Address">
+                            <input class="field" type="email" name="email" placeholder="Email Address" required="required">
                             <span class="focus-field"></span>
                         </div>
 
                         <div class="wrap-field">
-                            <input class="field" type="password" name="password" placeholder="Password">
+                            <input class="field" type="password" name="password" placeholder="New Password" required="required">
+                            <span class="focus-field"></span>
+                        </div>
+
+                        <div class="wrap-field">
+                            <input class="field" type="password" name="password" placeholder="Confirm Password" required="required">
                             <span class="focus-field"></span>
                         </div>
 
                         <div class="container-form-form-btn">
                             <button class="form-form-btn">
-                            Login
+                            Done
                         </button>
                         </div>
 
                         <div class="text-center">
-                            <a class="txt1" href="forgot-password.php">
-                            Forgot Password?
+                            <a class="txt1" href="login.php">
+                            Login
                         </a>
                         </div>
                         <div class="text-center">
+                            <p>Don't have an account?
                             <a class="txt1" href="register.php">
-                            Register Now!
-                        </a>
+                            Register Now!</a>
+                        </p>
                         </div>
                     </form>
                 </div>
