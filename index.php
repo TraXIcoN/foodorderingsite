@@ -64,7 +64,12 @@
             <img class="caro-img" src="images/caro21.jpg">
             <div class="hero-text">
             <h1 style="font-size:50px">ORDER FOOD NOW!</h1>
-            <button><a href="register.php">Register</a></button>
+            <?php if(!isset($_SESSION['logged'])) { 
+              echo '<button><a href="register.php">Register</a></button>';
+            } else {
+              echo '<button><a href="menu.php">Order Now</a></button>';
+            }?>
+            
         </div>
     </div>
     </div>
@@ -84,9 +89,7 @@
                 <img src="images/s1.svg">
             </div>
             <div class="intro-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna
-                    iaculis, pretium nulla sit amet, efficitur tellus. Vivamus eu enim consectetur justo suscipit maximus. Suspendisse potenti. Pellentesque efficitur est ac efficitur aliquet. Sed lobortis eu neque ac tincidunt. Ut venenatis dictum felis
-                    non venenatis. Sed nisi metus, placerat a neque in, tincidunt interdum magna. Cras eget pretium lorem.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna iaculis, pretium nulla sit amet, efficitur tellus.</p>
             </div>
 
         </div>
