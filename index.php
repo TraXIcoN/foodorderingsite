@@ -6,13 +6,23 @@
 <html>
 
 <head>
+
   <title>Home Page | Head Over Meals</title>
     <?php include('head.php'); ?>
     <style type="text/css">
-        .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/caro21.jpg");
+
+      body {
+        margin: 0;
+        padding:0;
+      box-sizing: border-box;
+        
+      }
+
+  .hero-image {
+
+  //background-image: linear-gradient(rgba(0, 0, 0, 0.), rgba(0, 0, 0, 0.5)), url("images/caro21.jpg");
   height: 50%;
-  width: auto;
+  overflow-x: hidden;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,6 +63,9 @@
   background-color: #555;
   color: white;
 }
+#img_container {
+  padding: 0;
+}
     </style>
 </head>
 
@@ -60,8 +73,8 @@
 <?php include('navbar.php'); ?>
 
     <div class="container-fluid resize" id="img_container">
-        <div class="hero-image caro-">
-            <img class="caro-img" style="opacity: 0.5;" src="images/caro21.jpg">
+        <div class="hero-image">
+            <img class="caro-img"  src="images/caro21.jpg">
             <div class="hero-text">
             <h1 style="font-size:50px; color: white;">ORDER FOOD NOW!</h1>
             <?php if(!isset($_SESSION['logged'])) { 
