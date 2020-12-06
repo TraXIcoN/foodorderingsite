@@ -11,6 +11,6 @@ if(isset($_SESSION['logged'])) {
 </div>';
 }
 else {
-	echo '<i class="fa fa-sign-in" style="margin-right:-10px;" aria-hidden="true"></i><a href="login.php">Login</a>';
+	echo '<i class="fa fa-sign-in" style="margin-right:3px;" aria-hidden="true"></i>Login';
 }
 ?>
