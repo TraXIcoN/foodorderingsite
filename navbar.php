@@ -20,8 +20,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a class="navbut" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px;" aria-hidden="true"></i>OrderS</a></li>
       <li><a class="navbut" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px;" aria-hidden="true"></i>Cart</a></li>
-      <li><a class="navbut" href="login.php"><i class="fa fa-sign-in" style="margin-right:3px;" aria-hidden="true"></i><?php $loggedInUsername=(isset($_SESSION['logged']))?$_SESSION["user_name"]: ('Login');
-        echo $loggedInUsername; ?></a></li>
+      <li><a class="navbut" href="login.php"><i class="fa fa-sign-in" style="margin-right:3px;" aria-hidden="true"></i><?php include('dropdown.php'); ?></a></li>
     </ul>
   </div>
 </nav>
