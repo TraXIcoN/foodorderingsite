@@ -61,9 +61,9 @@
 
     <div class="container-fluid resize" id="img_container">
         <div class="hero-image caro-">
-            <img class="caro-img" src="images/caro21.jpg">
+            <img class="caro-img" style="opacity: 0.5;" src="images/caro21.jpg">
             <div class="hero-text">
-            <h1 style="font-size:50px">ORDER FOOD NOW!</h1>
+            <h1 style="font-size:50px; color: white;">ORDER FOOD NOW!</h1>
             <?php if(!isset($_SESSION['logged'])) { 
               echo '<button><a href="register.php">Register</a></button>';
             } else {
@@ -95,7 +95,7 @@
         </div>
 
     </section>
-    <section id="some-review">
+    <section id="some-review" style="width: 80%; margin: 0 auto;">
         <div class="slider">
             <div class="slides">
                 <div id="slide-1">
@@ -113,7 +113,7 @@
             <a href="#slide-3"> </a>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" style="background-color: rgba(0,0,0,0.9);">
         <div class="inner-footer">
             <div class="about-us">
                 <h3>About</h3>
