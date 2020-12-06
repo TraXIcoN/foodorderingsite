@@ -55,15 +55,15 @@
 </div>
 <div class="row menu-items2">
   <?php 
-    $query="SELECT * FROM food";
+    $query="SELECT * FROM food INNER JOIN category ON food.cat_id=category.cat_id";
 
         $result = mysqli_query($conn, $query);
 
         // fetch the resulting rows as an array
         $food = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        
+        //print_r($food);
         foreach($food as $f) {
-          echo '<div class="menu-item2 col-sm-4 col-xs-12 lunch clearfix">';
+          echo '<div class="menu-item2 col-sm-4 col-xs-12 '.$f['cat_name'].' clearfix">';
           echo'<div class="menu-info">';
           echo'<img src="'.$f['image'].'" class="img-responsive" alt="" />';
           echo'<a href="./menu_all.html">';
@@ -84,6 +84,7 @@
         } 
   ?>
 </div>
+
 </section>
 
 <?php include('footer.php'); ?>
