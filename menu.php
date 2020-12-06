@@ -1,29 +1,15 @@
+<?php 
+
+    session_start();
+    $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
+    if(!$conn) {
+        echo "Connection Error: " . mysqli_connect_error();
+    } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Order Food</title>
-
-<script src="/cdn-cgi/apps/head/OkbNSnEV_PNHTKP2_EYPrFNyZ8Q.js"></script><link rel="shortcut icon" href="img/favicon.ico">
-
-<meta name="viewport" content="width=device-width">
-
-<link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/cart.css">
-    <link rel="stylesheet" type="text/css" href="css/navbar.css">
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/plugin.css">
-    <link rel="stylesheet" href="css/menu_main.css">
+  <title>Menu | Head Over Meals</title>
+  <?php include('head.php'); ?>
 </head>
 <body>
 <div class="scoket">
@@ -31,38 +17,14 @@
 </div>
 </div>
 <div class="body">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">HEAD OVER MEALS</a>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="index.php">HOME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="menu.php">MENU</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cart.php">CART</a>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a class="navbut" href="register.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Sign Up</a></li>
-      <li><a class="navbut" href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
-    </ul>
-  </div>
-</nav>
+<?php include('navbar.php'); ?>
 
 <section class="page_header">
 <div class="container">
 <div class="row">
 <div class="col-md-12 text-center">
 <h2 class="text-uppercase">Menu</h2>
-<p>...</p>
+<p>The best of food at one place.</p>
 </div>
 </div>
 </div>
@@ -92,92 +54,35 @@
 </div>
 </div>
 <div class="row menu-items2">
-<div class="menu-item2 col-sm-4 col-xs-12 starter dinner desserts clearfix">
-<div class="menu-info">
-<img src="img/menu/1/1.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 starter clearfix">
-<div class="menu-info">
-<img src="img/menu/1/2.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 breakfast desserts starter clearfix">
-<div class="menu-info">
-<img src="img/menu/1/3.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 breakfast clearfix">
-<div class="menu-info">
-<img src="img/menu/1/4.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 lunch starter breakfast clearfix">
-<div class="menu-info">
-<img src="img/menu/1/5.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 lunch clearfix">
-<div class="menu-info">
-<img src="img/menu/1/6.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-</div>
-</div>
+  <?php 
+    $query="SELECT * FROM food";
+
+        $result = mysqli_query($conn, $query);
+
+        // fetch the resulting rows as an array
+        $food = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        
+        foreach($food as $f) {
+          echo '<div class="menu-item2 col-sm-4 col-xs-12 lunch clearfix">';
+          echo'<div class="menu-info">';
+          echo'<img src="'.$f['image'].'" class="img-responsive" alt="" />';
+          echo'<a href="./menu_all.html">';
+          echo'<div class="menu2-overlay">';
+          echo'<h4>'.$f['f_name'].'</h4>';
+          echo'<p>'.$f['f_description'].'</p>';
+          echo'<span class="price">$'.$f['f_price'].'</span>';
+          echo'</div>';
+          echo'</a>';
+          echo'</div>';
+          echo'<a href="./menu_all.html" class="menu-more">+</a>';
+          echo'</div>';
+        }
+        // free the $result from memory (good practise)
+        mysqli_free_result($result);
+        if(!$result) {
+        echo "Error";
+        } 
+  ?>
 </div>
 </section>
 

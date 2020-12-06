@@ -1,25 +1,18 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Head over Meals</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/cart.css">
-    <link rel="stylesheet" type="text/css" href="css/navbar.css">
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Home Page | Head Over Meals</title>
+    <?php include('head.php'); ?>
     <style type="text/css">
         .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/caro21.jpg");
   height: 50%;
+  width: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,30 +57,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">HEAD OVER MEALS</a>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="index.php">HOME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="menu.php">MENU</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cart.php">CART</a>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a class="navbut" href="register.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Sign Up</a></li>
-      <li><a class="navbut" href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
-    </ul>
-  </div>
-</nav>
+<?php include('navbar.php'); ?>
 
     <div class="container-fluid resize" id="img_container">
         <div class="hero-image caro-">
@@ -144,7 +114,7 @@
         <div class="inner-footer">
             <div class="about-us">
                 <h3>About</h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna
+                <p class="text-justify" style="margin-left: -15px; margin-right: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna
                     iaculis, pretium nulla sit amet, efficitur tellus. </p>
             </div>
             <div class="quick-links">
