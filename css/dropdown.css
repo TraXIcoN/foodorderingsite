@@ -1,14 +1,11 @@
-<style>
-.dropbtn {
-  color: white !important;
-  
-  border: none;
-  cursor: pointer;
+
+.dropbtn:hover {
+  color: #ff4d4d;
 }
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 
 .dropdown-content {
@@ -29,9 +26,7 @@
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-
-</style>

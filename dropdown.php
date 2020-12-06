@@ -2,7 +2,7 @@
 
 if(isset($_SESSION['logged'])) {
 	echo '<div class="dropdown">
-  <button class="dropbtn">'.$_SESSION["user_name"].'</button>
+  <div class="dropbtn" style="color:white;"><i class="fa fa-user"  style="margin-right:3px; color: white;" aria-hidden="true"></i>'.$_SESSION["user_name"].'</div>
   <div class="dropdown-content">
   <a href="#">Profile</a>
   <a href="#">Tickets</a>
@@ -11,6 +11,6 @@ if(isset($_SESSION['logged'])) {
 </div>';
 }
 else {
-	echo 'Login';
+	echo '<i class="fa fa-sign-in" style="margin-right:3px;" aria-hidden="true"></i>Login';
 }
 ?>

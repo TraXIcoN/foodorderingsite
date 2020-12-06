@@ -76,6 +76,7 @@
                         </div>
                         <div id="emailValid"></div>
                         <div class="wrap-field">
+                            
                             <input class="field" type="password" id="password" name="password" placeholder="Password" required>
                             <span class="focus-field"></span>
                             
@@ -109,7 +110,7 @@
     email.addEventListener("keyup",  function() {
         const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if(!re.test(email.value)) {
-            document.getElementById("emailValid").innerHTML="<p style='color: black; margin: -10px;'>*Enter a proper email address</p>";
+            document.getElementById("emailValid").innerHTML="<p style='color: black;margin-top: -10px;font-size: 16px;'>*Enter a proper email address</p>";
         }
         else {
             document.getElementById("emailValid").remove();
@@ -119,7 +120,7 @@
         
         if(password.value.length<6) {
             
-            document.getElementById("passwordValid").innerHTML="<p style='color: black;'>*Password must be more than 6 characters.</p>";
+            document.getElementById("passwordValid").innerHTML="<p style='color: black;font-size: 16px;margin-top: -10px;'>*Password must be more than 6 characters.</p>";
         }
         else {
             document.getElementById("passwordValid").remove();

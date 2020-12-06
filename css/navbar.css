@@ -1,12 +1,12 @@
 .navbut {
     text-decoration: none;
     color: white;
-    padding-left: 20px
+    padding-left: 20px;
     padding-bottom: 20px;
 }
 
 .navbut:hover  {
     text-decoration: none;
-    color: orange;
+    color: #ff4d4d;
 }
 
