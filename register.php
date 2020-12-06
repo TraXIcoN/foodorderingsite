@@ -22,7 +22,7 @@
     $update=mysqli_query($conn, $query);
     if(!$update) {
     echo "ERROR WHILE INSERTING!";
-    
+
     }
 
     }
@@ -98,11 +98,7 @@
                             Register
                         </button>
                     </div>
-                    <div class="text-center">
-                        <a class="txt1" href="#">
-                            Forgot Password?
-                        </a>
-                    </div>
+                    
                     <div class="text-center">
                         <a class="txt1" href="login.php">
                             Login Now!
