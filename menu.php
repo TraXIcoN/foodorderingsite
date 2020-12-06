@@ -1,8 +1,13 @@
+<?php 
+    $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
+    if(!$conn) {
+        echo "Connection Error: " . mysqli_connect_error();
+    } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Tomato Responsive Restaurant HTML5 Template</title>
+<title>Order Food | Head Over Meals</title>
 
 <script src="/cdn-cgi/apps/head/OkbNSnEV_PNHTKP2_EYPrFNyZ8Q.js"></script><link rel="shortcut icon" href="img/favicon.ico">
 
@@ -92,92 +97,35 @@
 </div>
 </div>
 <div class="row menu-items2">
-<div class="menu-item2 col-sm-4 col-xs-12 starter dinner desserts clearfix">
-<div class="menu-info">
-<img src="img/menu/1/1.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 starter clearfix">
-<div class="menu-info">
-<img src="img/menu/1/2.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 breakfast desserts starter clearfix">
-<div class="menu-info">
-<img src="img/menu/1/3.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 breakfast clearfix">
-<div class="menu-info">
-<img src="img/menu/1/4.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 lunch starter breakfast clearfix">
-<div class="menu-info">
-<img src="img/menu/1/5.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-<div class="menu-item2 col-sm-4 col-xs-12 lunch clearfix">
-<div class="menu-info">
-<img src="img/menu/1/6.jpg" class="img-responsive" alt="" />
-<a href="./menu_all.html">
-<div class="menu2-overlay">
-<h4>English-Asparagus</h4>
-<p>Asparagus, hens egg, toasted
-<br>sunflower seeds, Spenwood cheese</p>
-<span class="price">$ 14.95</span>
-</div>
-</a>
-</div>
-<a href="./menu_all.html" class="menu-more">+</a>
-</div>
-</div>
-</div>
+  <?php 
+    $query="SELECT * FROM food";
+
+        $result = mysqli_query($conn, $query);
+
+        // fetch the resulting rows as an array
+        $food = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        
+        foreach($food as $f) {
+          echo '<div class="menu-item2 col-sm-4 col-xs-12 lunch clearfix">';
+          echo'<div class="menu-info">';
+          echo'<img src="'.$f['image'].'" class="img-responsive" alt="" />';
+          echo'<a href="./menu_all.html">';
+          echo'<div class="menu2-overlay">';
+          echo'<h4>'.$f['f_name'].'</h4>';
+          echo'<p>'.$f['f_description'].'</p>';
+          echo'<span class="price">$'.$f['f_price'].'</span>';
+          echo'</div>';
+          echo'</a>';
+          echo'</div>';
+          echo'<a href="./menu_all.html" class="menu-more">+</a>';
+          echo'</div>';
+        }
+        // free the $result from memory (good practise)
+        mysqli_free_result($result);
+        if(!$result) {
+        echo "Error";
+        } 
+  ?>
 </div>
 </section>
 
