@@ -52,12 +52,13 @@
         <a class="nav-link" href="menu.php">MENU</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cart.php">CART</a>
+        <a class="nav-link" href="blog.php">BLOG</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a class="navbut" href="register.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Sign Up</a></li>
-      <li><a class="navbut" href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
+      <li><a class="navbut" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px;" aria-hidden="true"></i>OrderS</a></li>
+      <li><a class="navbut" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px;" aria-hidden="true"></i>Cart</a></li>
+      <li><a class="navbut" href="login.php"><i class="fa fa-sign-in" style="margin-right:3px;" aria-hidden="true"></i>Login</a></li>
     </ul>
   </div>
 </nav>
@@ -67,7 +68,7 @@
 <div class="row">
 <div class="col-md-12 text-center">
 <h2 class="text-uppercase">Menu</h2>
-<p>...</p>
+<p>The best of food at one place.</p>
 </div>
 </div>
 </div>
