@@ -18,8 +18,12 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li ><a class="navbut" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px;" aria-hidden="true"></i>OrderS</a></li>
-      <li ><a class="navbut" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px;" aria-hidden="true"></i>Cart</a></li>
+      <?php if(isset($_SESSION['logged'])) {
+
+        echo '<li ><a class="navbut" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px;" aria-hidden="true"></i>OrderS</a></li>
+      <li ><a class="navbut" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px;" aria-hidden="true"></i>Cart</a></li>';
+      }?>
+      
       <li style="color:white;padding-top:-10px;"><a class="navbut" href="login.php"><?php include('dropdown.php'); ?></a></li>
     </ul>
   </div>
