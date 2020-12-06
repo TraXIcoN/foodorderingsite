@@ -46,7 +46,7 @@
 
 <body>
 <?php include('navbar.php'); ?>
-    <br><br>
+    <br><br><br>
     <div class="limiter" style="background-image: url(images/formsback.png); background-repeat: no-repeat; background-size: cover;">
         <div class="container-form">
             <div class="wrap-form">
@@ -108,6 +108,7 @@
             </div>
         </div>
     </div>
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

@@ -76,7 +76,7 @@
                         </div>
                         <div id="emailValid"></div>
                         <div class="wrap-field">
-                            
+
                             <input class="field" type="password" id="password" name="password" placeholder="Password" required>
                             <span class="focus-field"></span>
                             
@@ -103,6 +103,7 @@
             </div>
         </div>
     </div>
+    <?php include('footer.php'); ?>
 </body>
 <script type="text/javascript">
     let email=document.getElementById("email");
