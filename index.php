@@ -195,7 +195,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-color: #e7e7e7;">
 <?php include('navbar.php'); ?>
 
     <div class="container-fluid resize" id="img_container">
@@ -212,7 +212,7 @@
         </div>
     </div>
     </div>
-    <section id="intro">
+    <section id="intro" style="background-color: white;">
         <div class="wrapper">
             <div class="intro-description">
                 <h1>Welcome to Head Over Meals</h1>

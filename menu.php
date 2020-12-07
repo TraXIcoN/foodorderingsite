@@ -11,7 +11,7 @@
   <title>Menu | Head Over Meals</title>
   <?php include('head.php'); ?>
 </head>
-<body>
+<body style="background-color: #e7e7e7;">
 <div class="scoket">
 <img src="img/preloader.svg" alt="" />
 </div>
