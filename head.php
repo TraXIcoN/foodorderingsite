@@ -17,5 +17,4 @@
     <link rel="stylesheet" type="text/css" href="css/plugin.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/menu_main.css">
-    <link rel="stylesheet" type="text/css" href="css/profile.css">
     
