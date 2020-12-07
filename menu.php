@@ -70,7 +70,7 @@
           echo'<div class="menu2-overlay">';
           echo'<h4>'.$f['f_name'].'</h4>';
           echo'<p>'.$f['f_description'].'</p>';
-          echo'<span class="price">$'.$f['f_price'].'</span>';
+          echo'<span class="price">₹'.$f['f_price'].'</span>';
           echo'</div>';
           echo'</a>';
           echo'</div>';

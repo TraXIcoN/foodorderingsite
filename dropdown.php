@@ -5,7 +5,7 @@ if(isset($_SESSION['logged'])) {
   <div class="dropbtn navbut" style="color:white;font-family: raleway !important; font-size:15px; font-weight: 800;"><i class="fa fa-user"  style="margin-right:3px; color: white;" aria-hidden="true"></i>'.strtoupper($_SESSION["user_name"]).'</div>
   <div class="dropdown-content">
   <a href="profile.php">Profile</a>
-  <a href="#">Tickets</a>
+  <a href="tickets.php">Tickets</a>
   <a href="logout.php">Log out</a>
   </div>
 </div>';
