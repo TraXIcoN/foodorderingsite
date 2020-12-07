@@ -49,10 +49,10 @@
                <ul class="social">
                           <span>Social</span>    
                            <li>
-                                <a href="#"><i class="fa fa-facebook fa-2x"></i></a> 
-                                <a href="#"><i class="fa fa-github fa-2x"></i></a> 
-                                <a href="#"><i class="fa fa-twitter fa-2x"></i></a> 
-                                <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+                                <a href="#"><i class="fa fa-facebook fa-2x" style="font-size: .8cm;"></i></a> 
+                                <a href="#"><i class="fa fa-github fa-2x" style="font-size: .8cm;"></i></a> 
+                                <a href="#"><i class="fa fa-twitter fa-2x" style="font-size: .8cm;"></i></a> 
+                                <a href="#"><i class="fa fa-google-plus fa-2x" style="font-size: .8cm;"></i></a>
                             </li>
                  </ul>
             </div>
