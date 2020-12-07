@@ -1,27 +1,62 @@
-    <footer class="footer" style="background-color: rgba(0,0,0,0.9);">
-        <div class="inner-footer">
-            <div class="about-us">
-                <h3>About</h3>
-                <p class="text-justify" style="margin-left: -15px; margin-right: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet ac tellus sit amet bibendum. Ut ut velit dapibus, tempor massa nec, eleifend odio. Aliquam ligula lorem, feugiat a felis eu, vehicula semper nunc. Vivamus non urna
-                    iaculis, pretium nulla sit amet, efficitur tellus. </p>
+<footer>
+ <div class="container">
+   <div class="row">
+   
+            <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+                <ul class="adress">
+                     <span>Adress</span>    
+                     <li>
+                        <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
+                      </li>
+                           
+                      <li>
+                        <p>+90 1234 56789</p>
+                      </li>
+                           
+                      <li>
+                        <p>info@gmail.com</p>
+                      </li>
+                 </ul>
             </div>
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul class="footer-links" style="padding-left: 110px; ">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Contribute</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Sitemap</a></li>
+            
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <ul class="contact">
+                     <span>Contact</span>    
+                     <li>
+                        <a href="#">Home</a>
+                      </li>
+                           
+                      <li>
+                         <a href="#">About</a>
+                      </li>
+                           
+                      <li>
+                        <a href="#">Blog</a>
+                      </li>
+                           
+                      <li>
+                         <a href="#">Privacy Policy </a>
+                      </li>
+                           
+                      <li>
+                        <a href="#">Contact</a>
+                     </li>
                 </ul>
             </div>
-            <div class="contact-us" >
-                <h3>Contact Us</h3>
-                <ul class="social-icons" style="padding-left: 110px; ">
-                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
-                </ul>
+       
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+               <ul class="social">
+                          <span>Social</span>    
+                           <li>
+                                <a href="#"><i class="fa fa-facebook fa-2x"></i></a> 
+                                <a href="#"><i class="fa fa-github fa-2x"></i></a> 
+                                <a href="#"><i class="fa fa-twitter fa-2x"></i></a> 
+                                <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+                            </li>
+                 </ul>
             </div>
-        </div>
-    </footer>
+       
+       
+       </div> 
+    </div>
+</footer>

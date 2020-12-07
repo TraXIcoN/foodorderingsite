@@ -139,60 +139,58 @@ img{
 
 /* Footer */
 
-.footer {
-    display: block;
-    overflow: hidden;
-    padding: 70px 10px;
-    box-sizing: border-box;
-    background-color: black;
-    color: white;
+footer{
+     background-color: black;
+     padding:70px 0px;
+     text-align: center;
+}          
+
+footer ul li{
+    padding:5px 0px;
 }
 
-.inner-footer {
-    display: block;
-    margin: 0 auto;
-    width: 1100px;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-flow: row nowrap;
-    align-content: stretch;
+footer ul li a:hover{
+    padding:5px 0px;
+    color: red
 }
 
-.inner-footer>div {
-    width: 33.33%;
-    margin: 0 auto;
+.adress span , .contact span , .social span{
+   color: #FFF; 
+   font-weight: 800; 
+   padding-bottom: 10px; 
+   margin-bottom: 20px;
+   display: block;
+   text-transform: uppercase;
+   font-size: 20px;
+   letter-spacing: 3px;
+}
+ 
+.adress li p , .contact li a , .social li a{
+    color:#FFF;
+    letter-spacing: 2px;
+    text-decoration:none;
+    font-size:15px;
 }
 
-.inner-footer .about-us {
-    flex-grow: 2;
+.social li{
+    float:center;
+    padding-left: 20px; 
 }
 
-.inner-footer li {
-    list-style-type: none;
-    font-size: 1.3rem;
+.social li a i:hover{
+    color: red; 
 }
 
-.inner-footer a {
-    text-decoration: none;
-    color: white;
+
+.adress , .contact , .social {
+    list-style: none;
 }
 
-.inner-footer a:hover {
-    color: #ff4d4d;
+.fa{
+    color:#9c9c9c;
+    margin-right: 15px;
+    font-size:14px;
 }
-
-.inner-footer h3 {
-    padding-bottom: 15px;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.inner-footer i {
-    padding-right: 12px;
-}
-
 
 
 /*********************************************************/
