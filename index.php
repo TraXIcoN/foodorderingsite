@@ -66,6 +66,16 @@
 #img_container {
   padding: 0;
 }
+
+.specialdiv {
+  transition: width 2s, height 2s, transform 0.5s;
+}
+
+.specialdiv:hover {
+  transform: scale(1.25);
+  z-index: 50;
+}
+
     </style>
 </head>
 
@@ -125,6 +135,126 @@
             <a href="#slide-2"> </a>
             <a href="#slide-3"> </a>
         </div>
+    </section>
+
+    <section id="specials" style="text-align: center; ">
+          <div class="container" style="text-align: center;">
+            <h1>TODAY'S SPECIALS</h1>
+      <div class="row seven-cols">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
+          <div class="staff-photo">
+            <img src="http://placehold.it/150x150.jpg">
+          </div>
+
+          <div class="staff-name">
+            <div class="staff-second-name">
+            NAME
+            </div>
+          </div>
+
+          <div class="staff-title">
+            Food Title and This Text Could Longer Due to Titles
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
+          <div class="staff-photo">
+            <img src="http://placehold.it/150x150.jpg">
+          </div>
+
+          <div class="staff-name">
+            <div class="staff-second-name">
+            NAME
+            </div>
+          </div>
+
+          <div class="staff-title">
+            Food Title and This Text Could Longer Due to Titles
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
+          <div class="staff-photo">
+            <img src="http://placehold.it/150x150.jpg">
+          </div>
+
+          <div class="staff-name">
+            <div class="staff-second-name">
+            NAME
+            </div>
+          </div>
+
+          <div class="staff-title">
+            Food Title and This Text Could Longer Due to Titles
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
+          <div class="staff-photo">
+            <img src="http://placehold.it/150x150.jpg">
+          </div>
+
+          <div class="staff-name">
+            <div class="staff-second-name">
+            NAME
+            </div>
+          </div>
+
+          <div class="staff-title">
+            Food Title and This Text Could Longer Due to Titles
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
+          <div class="staff-photo">
+            <img src="http://placehold.it/150x150.jpg">
+          </div>
+
+          <div class="staff-name">
+            <div class="staff-second-name">
+            NAME
+            </div>
+          </div>
+
+          <div class="staff-title">
+            Food Title and This Text Could Longer Due to Titles
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
+          <div class="staff-photo">
+            <img src="http://placehold.it/150x150.jpg">
+          </div>
+
+          <div class="staff-name">
+            <div class="staff-second-name">
+            NAME
+            </div>
+          </div>
+
+          <div class="staff-title">
+            Food Title and This Text Could Longer Due to Titles
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
+          <div class="staff-photo">
+            <img src="http://placehold.it/150x150.jpg">
+          </div>
+
+          <div class="staff-name">
+            <div class="staff-second-name">
+            NAME
+            </div>
+          </div>
+
+          <div class="staff-title">
+            Food Title and This Text Could Longer Due to Titles
+          </div>
+        </div>
+       </div>
+    </div>
+
     </section>
 <?php include('footer.php'); ?>
 </body>
