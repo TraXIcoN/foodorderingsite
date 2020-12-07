@@ -1,5 +1,9 @@
 <?php 
   session_start();
+  $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
+    if(!$conn) {
+        echo "Connection Error: " . mysqli_connect_error();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -242,32 +246,26 @@
 </div>
 <div class="row wow fadeInUp">
   <div class="box">
-      <div class="card">
-        <div class="imgBx">
-            <img src="images/pavbhaji.png" alt="images">
-        </div>
-        <div class="details">
-            <h2>PAV BHAJI<br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
-        </div>
-      </div>
-    
-       <div class="card">
-         <div class="imgBx">
-            <img src="images/cholebhature.png" alt="images">
-         </div>
-         <div class="details">
-            <h2>CHOLE BHATURE<br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
-          </div>
-       </div>
+      <?php 
+        $query="SELECT * FROM food where f_special=1";
 
-       <div class="card">
-         <div class="imgBx">
-            <img src="images/misalpav.png" alt="images">
-         </div>
-         <div class="details">
-            <h2>MISSAL PAV<br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
+        $result = mysqli_query($conn, $query);
+
+        // fetch the resulting rows as an array
+        $food = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        //print_r($food);
+        foreach($food as $f) {
+          echo '<div class="card">
+          <div class="imgBx">
+              <img src="'.$f['image'].'" alt="images">
           </div>
-       </div>
+          <div class="details">
+              <h2>'.$f['f_name'].'</h2><br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
+          </div>
+        </div>';
+
+        }
+      ?>
 </div>
 </div>
 </div>

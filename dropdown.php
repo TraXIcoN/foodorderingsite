@@ -2,7 +2,7 @@
 
 if(isset($_SESSION['logged'])) {
 	echo '<div class="dropdown">
-  <div class="dropbtn" style="color:white;font-family: Raleway;"><i class="fa fa-user"  style="margin-right:3px; color: white;" aria-hidden="true"></i>'.strtoupper($_SESSION["user_name"]).'</div>
+  <div class="dropbtn navbut" style="color:white;font-family: raleway; font-size:15px; font-weight: 800;"><i class="fa fa-user"  style="margin-right:3px; color: white;" aria-hidden="true"></i>'.strtoupper($_SESSION["user_name"]).'</div>
   <div class="dropdown-content">
   <a href="profile.php">Profile</a>
   <a href="#">Tickets</a>
