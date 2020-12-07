@@ -19,7 +19,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <?php if(isset($_SESSION['logged'])) {
-      echo '<li ><a class="navbut" style="text-decoration: none; color: white; margin-left: 10px;" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>OrderS</a></li>
+      echo '<li ><a class="navbut" style="text-decoration: none; color: white; margin-left: 10px;" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Orders</a></li>
       <li ><a class="navbut" style="text-decoration: none; color: white; margin-left: 10px; margin-right: 10px;" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Cart</a></li>';
     }
       ?>

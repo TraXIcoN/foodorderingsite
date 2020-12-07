@@ -3,6 +3,71 @@ session_start();
 if(!isset($_SESSION['logged'])) {
   header('location: login.php');
 }
+$conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
+    if(!$conn) {
+        echo "Connection Error: " . mysqli_connect_error();
+    }
+    $getQuery="SELECT * from customer where c_id='{$_SESSION["user_id"]}'";
+    $result = mysqli_query($conn, $getQuery);
+
+        // fetch the resulting rows as an array
+    $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+
+    if($_SERVER["REQUEST_METHOD"]=='POST'){
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $email=$_POST['email'];
+    $phone=$_POST['number'];
+    $street=$_POST['street'];
+    $city=$_POST['city'];
+    $state=$_POST['state'];
+    $pincode=$_POST['pincode'];
+    $query="UPDATE customer SET ";
+    if($fname!=$user["c_fname"]) {
+    	$query=$query."c_fname='{$fname}' ";
+    }
+    if($lname!=$user["c_lname"] and $fname!=$user["c_fname"]) {
+    	$query=$query.",c_lname='{$lname}' ";
+    } else {
+    	$query=$query."c_lname='{$lname}' ";
+    }
+    if($email!=$user["c_email"]) {
+    	$query=$query.",c_email='{$email}' ";
+    }
+    
+    if($street=$user["c_street"]) {
+    	$query=$query.",c_street='{$street}' ";
+    }
+    if($city!=$user["c_city"]) {
+    	$query=$query.",c_city='{$city}' ";
+    }
+    if($state!=$user["c_state"]) {
+    	$query=$query.",c_state='{$state}' ";
+    }
+    if($phone!=$user["c_phone_number"]) {
+    	$query=$query.",c_phone_number={$phone} ";
+    }
+    if($pincode!=$user["c_pincode"]) {
+    	$query=$query.", c_pincode={$pincode} ";
+    }
+
+    $query=$query."WHERE c_id={$_SESSION["user_id"]}";
+    if($query!="UPDATE customer SET WHERE c_id={$_SESSION["user_id"]}") {
+    	$update=mysqli_query($conn, $query);
+
+	    if(!$update) {
+	    	echo "ERROR WHILE UPDATING!";
+	    }
+	    else {
+	    	header('location:index.php');
+	    	//echo $query;
+	    }
+    }
+    
+
+    
+     }
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,9 +87,10 @@ if(!isset($_SESSION['logged'])) {
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+	<?php include('navbar.php'); ?>
   <div class="main-content">
     <!-- Top navbar -->
-    <?php include('navbar.php'); ?>
+    
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url('images/profileback.png'); background-size: cover; background-position: center top;">
       <!-- Mask -->
@@ -50,26 +116,25 @@ if(!isset($_SESSION['logged'])) {
                 <div class="col-8">
                   <h3 class="mb-0">My account</h3>
                 </div>
-                <div class="col-4 text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-                </div>
+                
               </div>
             </div>
             <div class="card-body">
-              <form>
+              <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
                   <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group focused">
-                        <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
-                      </div>
-                    </div>
+                    
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                        <input type="email" id="input-email" name="email" class="form-control form-control-alternative" value="<?php echo $user['c_email']; ?>">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-number">Phone Number</label>
+                        <input type="number" id="input-number" name="number" class="form-control form-control-alternative" placeholder="Phone Number" value="<?php echo $user['c_phone_number']; ?>">
                       </div>
                     </div>
                   </div>
@@ -77,13 +142,13 @@ if(!isset($_SESSION['logged'])) {
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
+                        <input type="text" id="input-first-name" name="fname" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $user['c_fname']; ?>">
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
+                        <input type="text" id="input-last-name" name="lname" class="form-control form-control-alternative" placeholder="Last name" value="<?php echo $user['c_lname']; ?>">
                       </div>
                     </div>
                   </div>
@@ -96,7 +161,7 @@ if(!isset($_SESSION['logged'])) {
                     <div class="col-md-12">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-address">Address</label>
-                        <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                        <input id="input-address" name="street" class="form-control form-control-alternative" placeholder="Home Address" value="<?php echo $user['c_street']; ?>" type="text">
                       </div>
                     </div>
                   </div>
@@ -104,19 +169,19 @@ if(!isset($_SESSION['logged'])) {
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-city">City</label>
-                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
+                        <input type="text" id="input-city" name="city" class="form-control form-control-alternative" placeholder="City" value="<?php echo $user['c_city']; ?>">
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group focused">
-                        <label class="form-control-label" for="input-country">Country</label>
-                        <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
+                        <label class="form-control-label" for="input-country">State</label>
+                        <input type="text" id="input-country" name="state" class="form-control form-control-alternative" placeholder="State" value="<?php echo $user['c_state']; ?>">
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-country">Postal code</label>
-                        <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
+                        <label class="form-control-label" for="input-country">Pincode</label>
+                        <input type="number" id="input-postal-code" name="pincode" class="form-control form-control-alternative" placeholder="Pincode" value="<?php echo $user['c_pincode']; ?>">
                       </div>
                     </div>
                   </div>
