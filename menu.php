@@ -65,7 +65,7 @@
         foreach($food as $f) {
           echo '<div class="menu-item2 col-sm-4 col-xs-12 '.$f['cat_name'].' clearfix">';
           echo'<div class="menu-info">';
-          echo'<img src="'.$f['image'].'" class="img-responsive" alt="" />';
+          echo'<img src="'.$f['image'].'" class="img-responsive" alt="" width=300 height=200 /> ';
           echo'<a href="./menu_all.html">';
           echo'<div class="menu2-overlay">';
           echo'<h4>'.$f['f_name'].'</h4>';

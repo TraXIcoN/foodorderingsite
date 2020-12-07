@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2020 at 10:46 AM
+-- Generation Time: Dec 07, 2020 at 05:25 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -42,10 +42,13 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`f_id`, `f_name`, `f_price`, `f_description`, `f_special`, `cat_id`, `image`) VALUES
-(1, 'Food1', 25, 'abc', 0, 1, 'img\\menu\\2\\1.jpg'),
-(2, 'food2', 50, 'def', 0, 2, 'img\\menu\\2\\2.jpg'),
-(3, 'Food1', 75, 'abc', 0, 1, 'img\\menu\\2\\3.jpg'),
-(4, 'Food1', 100, 'abc', 0, 1, 'img\\menu\\2\\4.jpg');
+(1, 'Burger', 70, 'abc', 0, 1, 'img\\menu\\2\\1.jpg'),
+(2, 'Samosa', 50, 'def', 0, 2, 'img\\menu\\2\\2.jpg'),
+(3, 'Dosa', 90, 'abc', 1, 2, 'img\\menu\\2\\3.jpg'),
+(4, 'Pizza', 100, 'abc', 0, 1, 'img\\menu\\2\\4.jpg'),
+(5, 'Dal Chawal', 110, 'Dal and Rice', 1, 3, 'img\\menu\\2\\dalchawal.jpg'),
+(6, 'Chole Bhature', 80, 'Chickpea', 1, 4, 'img\\menu\\2\\chole.jpg'),
+(7, 'Gulab Jamun', 60, 'Gulab Jamun', 0, 5, 'img\\menu\\2\\gulabjamun.jpg');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +68,7 @@ ALTER TABLE `food`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `f_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `f_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
