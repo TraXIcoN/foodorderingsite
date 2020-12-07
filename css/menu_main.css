@@ -1841,13 +1841,13 @@ fieldset[disabled] .btn-default.active {
 }
 
 .rc-ratings span.active {
-	color: #f6b61b
+	color: #ff4d4d
 }
 
 .recipie-content .btn-default {
 	color: #534120;
 	padding: 17px;
-	border: 1px solid #f2ba57;
+	border: 1px solid #ff4d4d;
 	font-size: 13px;
 	line-height: 14px;
 	border-radius: 1px;
