@@ -40,18 +40,6 @@ button::-moz-focus-inner,
   border-style: none;
 }
 
-input[type='radio'],
-input[type='checkbox'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-input[type='date'],
-input[type='time'],
-input[type='datetime-local'],
-input[type='month'] {
-  -webkit-appearance: listbox;
-}
 
 textarea {
   overflow: auto;
@@ -207,15 +195,6 @@ textarea.form-control {
 
 .card-header:first-child {
   border-radius: calc(.375rem - 1px) calc(.375rem - 1px) 0 0;
-}
-
-.media {
-  display: flex;
-  align-items: flex-start;
-}
-
-.media-body {
-  flex: 1 1;
 }
 
 .bg-secondary {
