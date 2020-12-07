@@ -1,9 +1,5 @@
-
-<!-----<<<<<<< Updated upstream   --->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black; z-index: 51;">
-<!----   =======     --->
-<!----    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">    --->
-<!--- >>>>>>> Stashed changes --->  
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,14 +33,15 @@
   
 
           <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"  
+        style="margin-top: 50px;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">HOM Admin</div>
             </a>
 
             <!-- Divider -->
