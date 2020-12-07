@@ -60,7 +60,7 @@ small {
 	position: relative;
 	height: 3px;
 	width: 113px;
-	background-color: #f9c56a;
+	background-color: #ff4d4d;
 	margin: 0 auto
 }
 
@@ -81,7 +81,7 @@ html {
 }
 
 .primary-color {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .vertical-space {
@@ -241,7 +241,7 @@ html {
 }
 
 .btn-default {
-	background-color: #f9c56a
+	background-color: #ff4d4d
 }
 
 .btn-default:hover {
@@ -265,8 +265,8 @@ html {
 .btn-default:active,
 .btn-default.active,
 .open>.dropdown-toggle.btn-default {
-	background-color: #f7b239;
-	border-color: #f7b239
+	background-color: #ff4d4d;
+	border-color: #ff4d4d;
 }
 
 .btn-default.disabled,
@@ -287,7 +287,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-	background-color: #f7b239
+	background-color: #ff4d4d;
 }
 
 .btn-lg {
@@ -320,7 +320,7 @@ fieldset[disabled] .btn-default.active {
 .navbar .navbar-nav>li>a:hover,
 .navbar .navbar-nav>li>a:active {
 	background-color: inherit!important;
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .navbar .navbar-nav>li>a:focus {
@@ -332,7 +332,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .navbar .cart-number {
-	background: #f9c56a;
+	background: #ff4d4d;
 	float: left;
 	width: 20px;
 	height: 20px;
@@ -350,7 +350,7 @@ fieldset[disabled] .btn-default.active {
 .nav .open>a,
 .nav .open>a:hover {
 	background-color: inherit!important;
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .nav .open>a:focus {
@@ -384,7 +384,7 @@ fieldset[disabled] .btn-default.active {
 .dropdown-menu li a:focus,
 .dropdown-menu li a:active {
 	background-color: inherit!important;
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .dropdown-menu>li>a {
@@ -420,7 +420,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .cart-content .cart-title {
-	border-top: 2px solid #f9c56a;
+	border-top: 2px solid #ff4d4d;
 	border-bottom: 1px solid rgba(255, 255, 255, .1);
 	padding: 15px
 }
@@ -455,7 +455,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .cart-item-desc a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .cart-item-price {
@@ -567,7 +567,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .footer h1 {
-	color: #f9c56a;
+	color: #ff4d4d;
 	font-size: 18px;
 	text-align: left;
 	margin: 60px 0 26px
@@ -589,7 +589,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .footer a {
-	color: #f9c56a;
+	color: #ff4d4d;
 	text-decoration: none
 }
 
@@ -617,7 +617,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .footer .footer-blog .footer-blog-text:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .footer .footer-blog .footer-blog-date {
@@ -648,13 +648,13 @@ fieldset[disabled] .btn-default.active {
 }
 
 .footer .footer-social-icons a:hover {
-	background: #f9c56a;
+	background: #ff4d4d;
 	color: #343434
 }
 
 .footer-address .fa {
 	margin-right: 10px;
-	color: #f9c56a;
+	color: #ff4d4d;
 	width: 18px;
 	text-align: center
 }
@@ -859,7 +859,7 @@ fieldset[disabled] .btn-default.active {
 	position: relative;
 	height: 3px;
 	width: 113px;
-	background-color: #f9c56a;
+	background-color: #ff4d4d;
 	margin: 0
 }
 
@@ -955,7 +955,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .reservation td .active {
-	background-color: #f9c56a!important
+	background-color: #ff4d4d!important
 }
 
 .help-block {
@@ -989,8 +989,8 @@ fieldset[disabled] .btn-default.active {
 .open .dropdown-toggle.datepicker table tr td.active.disabled,
 .open .dropdown-toggle.datepicker table tr td.active.disabled:hover {
 	color: #000;
-	background-color: #f9c56a;
-	border-color: #f9c56a;
+	background-color: #ff4d4d;
+	border-color: #ff4d4d;
 	border-radius: 0
 }
 
@@ -1015,8 +1015,8 @@ fieldset[disabled] .btn-default.active {
 .open .dropdown-toggle.datepicker table tr td span.active.disabled,
 .open .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
 	color: #000;
-	background-color: #f9c56a;
-	border-color: #f9c56a;
+	background-color: #ff4d4d;
+	border-color: #ff4d4d;
 	border-radius: 0
 }
 
@@ -1051,7 +1051,7 @@ fieldset[disabled] .btn-default.active {
 
 .clockpicker-tick.active,
 .clockpicker-tick:hover {
-	background-color: #f9c56a;
+	background-color: #ff4d4d;
 	background-color: rgba(249, 197, 106, .5)
 }
 
@@ -1063,7 +1063,7 @@ fieldset[disabled] .btn-default.active {
 
 .clockpicker-canvas-bg {
 	stroke: none;
-	fill: #f9c56a
+	fill: #ff4d4d
 }
 
 .clockpicker-canvas-bg-trans {
@@ -1071,7 +1071,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .clockpicker-canvas line {
-	stroke: #f9c56a
+	stroke: #ff4d4d
 }
 
 .popover {
@@ -1123,7 +1123,7 @@ fieldset[disabled] .btn-default.active {
 	position: relative;
 	height: 3px;
 	width: 113px;
-	background-color: #f9c56a;
+	background-color: #ff4d4d;
 	margin: 0
 }
 
@@ -1169,7 +1169,7 @@ fieldset[disabled] .btn-default.active {
 .menu-tags2 .tagsort2-active,
 .menu-tags3 .tagsort3-active,
 .menu-tags4 .tagsort4-active {
-	border-bottom: 3px solid #f9c56a;
+	border-bottom: 3px solid #ff4d4d;
 	color: #4b4741
 }
 
@@ -1182,7 +1182,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .menu .food-menu .menu-item.featured {
-	border-left: 3px solid #f9c56a
+	border-left: 3px solid #ff4d4d
 }
 
 .menu .food-menu .menu-item .dotted-bg,
@@ -1229,7 +1229,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .menu .food-menu .menu-item-active {
-	border-left: 3px solid #f9c56a
+	border-left: 3px solid #ff4d4d
 }
 
 .menu .food-menu .menu-btn {
@@ -1349,7 +1349,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .subscribe input {
-	border: 2px solid #f9c56a!important;
+	border: 2px solid #ff4d4d!important;
 	background: #fff none repeat scroll 0% 0%;
 	margin: 0 20px;
 	width: 263px!important;
@@ -1499,7 +1499,7 @@ fieldset[disabled] .btn-default.active {
 
 .services-slider .slick-dots li.slick-active button {
 	background-color: transparent;
-	border: solid 2px #f9c56a
+	border: solid 2px #ff4d4d
 }
 
 .services-slider .slick-dots li button:before {
@@ -1508,7 +1508,7 @@ fieldset[disabled] .btn-default.active {
 
 .services-slider .slick-dots li.slick-active button:before {
 	opacity: 1;
-	background: #f9c56a;
+	background: #ff4d4d;
 	width: 3px;
 	height: 3px;
 	border-radius: 50%;
@@ -1576,12 +1576,12 @@ fieldset[disabled] .btn-default.active {
 	-webkit-border-radius: 27px 28px 28px 27px/27px 27px 28px 28px;
 	-moz-border-radius: 27px 28px 28px 27px/27px 27px 28px 28px;
 	border-radius: 27px 28px 28px 27px/27px 27px 28px 28px;
-	background-color: #f9c56a;
+	background-color: #ff4d4d;
 	-webkit-box-shadow: 0 5px 4px rgba(177, 177, 177, .75);
 	-moz-box-shadow: 0 5px 4px rgba(177, 177, 177, .75);
 	box-shadow: 0 5px 4px rgba(177, 177, 177, .75);
-	text-shadow: 0 5px 5px #c1913e;
-	border: solid 1px #f2ba57;
+	text-shadow: 0 5px 5px #ff4d4d;
+	border: solid 1px #ff4d4d;
 	color: #fff;
 	line-height: 0;
 	font-weight: 300;
@@ -1746,7 +1746,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .contact-social a:hover {
-	background: #f9c56a;
+	background: #ff4d4d;
 	color: #262526
 }
 
@@ -1927,7 +1927,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .featured-recipies .slick-dots li.slick-active button {
-	background-color: #f9c56a
+	background-color: #ff4d4d
 }
 
 .featured-recipies .slick-dots li button:before {
@@ -2098,13 +2098,13 @@ fieldset[disabled] .btn-default.active {
 	color: #fff;
 	content: counter(li-counter);
 	counter-increment: li-counter;
-	background-color: #f9c56a
+	background-color: #ff4d4d
 }
 
 .ingredients {
 	padding: 27px 29px;
 	margin-bottom: 40px;
-	border-top: 1px solid #f9c56a;
+	border-top: 1px solid #ff4d4d;
 	background-color: #f9f9f9
 }
 
@@ -2157,7 +2157,7 @@ fieldset[disabled] .btn-default.active {
 	display: block;
 	width: 40%;
 	height: 4px;
-	background-color: #f9c56a
+	background-color: #ff4d4d
 }
 
 .progressbar .level-1 {
@@ -2242,7 +2242,7 @@ table {
 .post-format {
 	width: 76px;
 	height: 62px;
-	background: #f9c56a none repeat scroll 0% 0%;
+	background: #ff4d4d none repeat scroll 0% 0%;
 	font-size: 30px;
 	color: #201f1e;
 	line-height: 62px;
@@ -2327,7 +2327,7 @@ article p {
 
 .pagi_nation li a:hover,
 .pagi_nation li.active a {
-	background: #f9c56a;
+	background: #ff4d4d;
 	color: #0a0a0a
 }
 
@@ -2360,7 +2360,7 @@ article p {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: #f9c56a;
+	background: #ff4d4d;
 	color: #0a0a0a;
 	font-size: 15px
 }
@@ -2404,7 +2404,7 @@ article p {
 }
 
 .side-cat li a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .recent-post {
@@ -2442,7 +2442,7 @@ article p {
 }
 
 .rp-info a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .rp-info span {
@@ -2544,7 +2544,7 @@ article p {
 }
 
 .comments-area .comment .comment-info a {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .comments-area .comment .comment-info span {
@@ -2615,7 +2615,7 @@ article p {
 }
 
 .shop-cat li a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .shop-grid {
@@ -2681,7 +2681,7 @@ article p {
 }
 
 .product-info h4 a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .product-info .rc-ratings {
@@ -2761,7 +2761,7 @@ article p {
 }
 
 .rpp-info a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .rpp-info span {
@@ -2808,7 +2808,7 @@ article p {
 }
 
 .cart-table tbody tr td a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .cart-table thead tr th,
@@ -2842,7 +2842,7 @@ article p {
 }
 
 .coupon button:hover {
-	background: #f9c56a;
+	background: #ff4d4d;
 	transition: .4s;
 	color: #0a0a0a
 }
@@ -2967,7 +2967,7 @@ article p {
 }
 
 .ma-address a {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .gallery-item img {
@@ -2994,13 +2994,13 @@ article p {
 }
 
 .single-shop-carousel-nav .slick-next {
-	background: #f9c56a;
+	background: #ff4d4d;
 	color: #0a0a0a;
 	right: 0
 }
 
 .single-shop-carousel-nav .slick-prev {
-	background: #f9c56a;
+	background: #ff4d4d;
 	color: #0a0a0a;
 	left: 0
 }
@@ -3418,7 +3418,7 @@ article p {
 }
 
 .team-social li a:hover {
-	color: #f9c56a
+	color: #ff4d4d
 }
 
 .footer {
@@ -3511,7 +3511,7 @@ textarea {
 }
 
 .blog-slider .slick-dots li.slick-active button {
-	background-color: #f9c56a
+	background-color: #ff4d4d
 }
 
 .blog-slider .slick-dots li button:before {
@@ -3563,7 +3563,7 @@ textarea {
 }
 
 #OT_searchWrapper select option:hover {
-	background: #f9c56a
+	background: #ff4d4d
 }
 
 #OT_searchWrapper select {
@@ -3860,7 +3860,7 @@ article.blog-mason-item p {
 	top: -40px;
 	left: 0;
 	right: 0;
-	background: #f9c56a;
+	background: #ff4d4d;
 	text-transform: uppercase;
 	padding: 10px;
 	font-weight: 700;
