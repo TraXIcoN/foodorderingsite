@@ -15,7 +15,7 @@
 
         // fetch the resulting rows as an array
         $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-        print_r($user);
+        //print_r($user);
         // free the $result from memory (good practise)
         mysqli_free_result($result);
         if(!$result) {

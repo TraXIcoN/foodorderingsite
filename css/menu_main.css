@@ -4050,3 +4050,7 @@ textarea {
 		background-attachment: scroll
 	}
 }
+
+.navbut:hover {
+	color: #ff4d4d;
+}
