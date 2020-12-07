@@ -76,7 +76,119 @@
   z-index: 50;
 }
 
+  .box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  .card{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:53;
+  }
+  .card:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 55;
+  }
+  
+  .card:hover .imgBx
+  {
+    bottom: 80px;
+  }
+
+  .card .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+      z-index: 54;
+  }
+
+  .card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #777;
+   text-transform: uppercase;
+  } 
+
+  .card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   } 
+
     </style>
+    <script>
+    ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1530003103982991');
+    fbq('track', "PageView");
+    </script>
 </head>
 
 <body>
@@ -118,6 +230,49 @@
         </div>
 
     </section>
+
+    <section class="special">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="page-header wow fadeInDown">
+<h1 class="white">today's specials<small>Some description.</small></h1>
+</div>
+</div>
+</div>
+<div class="row wow fadeInUp">
+  <div class="box">
+      <div class="card">
+        <div class="imgBx">
+            <img src="images/pavbhaji.png" alt="images">
+        </div>
+        <div class="details">
+            <h2>PAV BHAJI<br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
+        </div>
+      </div>
+    
+       <div class="card">
+         <div class="imgBx">
+            <img src="images/cholebhature.png" alt="images">
+         </div>
+         <div class="details">
+            <h2>CHOLE BHATURE<br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
+          </div>
+       </div>
+
+       <div class="card">
+         <div class="imgBx">
+            <img src="images/misalpav.png" alt="images">
+         </div>
+         <div class="details">
+            <h2>MISSAL PAV<br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
+          </div>
+       </div>
+</div>
+</div>
+</div>
+</section>
+
     <section id="some-review" style="width: 80%; margin: 0 auto;">
         <div class="slider">
             <div class="slides">
@@ -137,123 +292,7 @@
         </div>
     </section>
 
-    <section id="specials" style="text-align: center; ">
-          <div class="container" style="text-align: center;">
-            <h1>TODAY'S SPECIALS</h1>
-      <div class="row seven-cols">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
-          <div class="staff-photo">
-            <img src="http://placehold.it/150x150.jpg">
-          </div>
 
-          <div class="staff-name">
-            <div class="staff-second-name">
-            NAME
-            </div>
-          </div>
-
-          <div class="staff-title">
-            Food Title and This Text Could Longer Due to Titles
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
-          <div class="staff-photo">
-            <img src="http://placehold.it/150x150.jpg">
-          </div>
-
-          <div class="staff-name">
-            <div class="staff-second-name">
-            NAME
-            </div>
-          </div>
-
-          <div class="staff-title">
-            Food Title and This Text Could Longer Due to Titles
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
-          <div class="staff-photo">
-            <img src="http://placehold.it/150x150.jpg">
-          </div>
-
-          <div class="staff-name">
-            <div class="staff-second-name">
-            NAME
-            </div>
-          </div>
-
-          <div class="staff-title">
-            Food Title and This Text Could Longer Due to Titles
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
-          <div class="staff-photo">
-            <img src="http://placehold.it/150x150.jpg">
-          </div>
-
-          <div class="staff-name">
-            <div class="staff-second-name">
-            NAME
-            </div>
-          </div>
-
-          <div class="staff-title">
-            Food Title and This Text Could Longer Due to Titles
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
-          <div class="staff-photo">
-            <img src="http://placehold.it/150x150.jpg">
-          </div>
-
-          <div class="staff-name">
-            <div class="staff-second-name">
-            NAME
-            </div>
-          </div>
-
-          <div class="staff-title">
-            Food Title and This Text Could Longer Due to Titles
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
-          <div class="staff-photo">
-            <img src="http://placehold.it/150x150.jpg">
-          </div>
-
-          <div class="staff-name">
-            <div class="staff-second-name">
-            NAME
-            </div>
-          </div>
-
-          <div class="staff-title">
-            Food Title and This Text Could Longer Due to Titles
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 specialdiv">
-          <div class="staff-photo">
-            <img src="http://placehold.it/150x150.jpg">
-          </div>
-
-          <div class="staff-name">
-            <div class="staff-second-name">
-            NAME
-            </div>
-          </div>
-
-          <div class="staff-title">
-            Food Title and This Text Could Longer Due to Titles
-          </div>
-        </div>
-       </div>
-    </div>
 
     </section>
 <?php include('footer.php'); ?>
