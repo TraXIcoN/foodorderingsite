@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black; z-index: 51;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black; z-index: 60;">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,13 @@
       if(!empty($_SESSION["shopping_cart"])) {
         $GLOBALS['count'] = count(array_keys($_SESSION["shopping_cart"]));}
 
-      echo '<li ><a class="navbut" style="text-decoration: none; margin-left: 10px; margin-right: 10px;" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Cart<span class="color: #ff4d4d; margin-bottom:10px; color: white;">'.$GLOBALS['count'].'</span></a></li>';
+      echo '<li ><a class="navbut" style="text-decoration: none; margin-left: 10px; margin-right: 10px;" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Cart<span style="  
+      color: white; 
+      padding: 5px;
+      background-color: white;
+      margin-left: 5px;
+      color: black;
+      border-radius: 20px;" class="total_cart_count">'.$GLOBALS['count'].'</span></a></li>';
     }
       ?>
       <li style="color:white;padding-top:-20px;"><?php include('dropdown.php'); ?></li>
