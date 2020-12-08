@@ -55,7 +55,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
          </section>
          <?php
 if(isset($_SESSION["shopping_cart"])){
-    $total_price = 0;
+    $GLOBALS['total_price'] = 0;
 ?>
          <section class="shop-content">
             <div class="container">
@@ -118,6 +118,7 @@ if(isset($_SESSION["shopping_cart"])){
                            </tr>
                           
                            
+                           <?php $GLOBALS['total_price'] += ($cartArr["price"]*$cartArr["quantity"]); }} ?>
                         </tbody>
                         
                      </table>
@@ -125,7 +126,7 @@ if(isset($_SESSION["shopping_cart"])){
                         <a href="menu.php"><button class="btn btn-default" type="submit">Update Cart</button></a>
                         <button class="btn btn-success" type="submit" onclick="window.open('./shop_checkout.html', '_self')">Checkout</button>
                      </div>
-                     <?php $total_price += ($cartArr["price"]*$cartArr["quantity"]); } ?>
+                     
                      <div class="cart_totals" style="text-align: center;">
                         <div class="col">
                            <h4 class="text-left">Cart Totals</h4>
@@ -137,7 +138,7 @@ if(isset($_SESSION["shopping_cart"])){
                                     <td>
                                       <span class="amount">
                                       <?php 
-                                            echo "₹".$total_price;
+                                            echo "₹".$GLOBALS['total_price'];
                                 
                                       ?>
                               
@@ -155,7 +156,7 @@ if(isset($_SESSION["shopping_cart"])){
                                     <td><strong>
                                       <span class="amount">
                                       <?php 
-                                      echo "₹".$total_price;
+                                      echo "₹".$GLOBALS['total_price'];
                                       ?>
                                     </span>
                                   </strong>
@@ -163,9 +164,7 @@ if(isset($_SESSION["shopping_cart"])){
                                  </tr>
                               </tbody>
                            </table>
-                           <?php
 
-} ?>
                         </div>
                      </div>
                   </div>
