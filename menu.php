@@ -49,8 +49,23 @@
 <head>
   <title>Menu | Head Over Meals</title>
   <?php include('head.php'); ?>
+  <link rel="stylesheet" type="text/css" href="css/popup.css">
+  <script type="text/javascript">
+ function myfunction() {
+   $('.button').click(function(){
+  var buttonId = $(this).attr('id');
+  $('#modal-container').removeAttr('class').addClass(buttonId);
+  $('body').addClass('modal-active');
+});
+
+$('#modal-container').click(function(){
+  $(this).addClass('out');
+  $('body').removeClass('modal-active');
+});
+ }
+</script>
 </head>
-<body style="background-color: #e7e7e7;">
+<body style="background-color: #e7e7e7;" onload="myfunction()">
 <div class="scoket">
 <img src="img/preloader.svg" alt="" />
 </div>
@@ -92,7 +107,20 @@
 </div>
 </div>
 </div>
-<div class="row menu-items2">
+<!------------------------------>
+<div id="modal-container">
+  <div class="modal-background">
+    <div class="modal">
+      <h2>I'm a Modal</h2>
+      <p>Hear me roar.</p>
+      <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+              </svg>
+    </div>
+  </div>
+</div>
+<!----------------------------->
+<div class="row menu-items2 content">
   <?php 
     $query="SELECT * FROM food INNER JOIN category ON food.cat_id=category.cat_id";
 
@@ -104,14 +132,14 @@
         foreach($food as $f) {
           echo '<form method="POST" action=" ">';
           echo '<div class="menu-item2 col-sm-4 col-xs-12 '.$f['cat_name'].' clearfix">';
-          echo'<div class="menu-info">';
+          echo'<div class="menu-info buttons">';
 
           echo'<img src="'.$f['image'].'" class="img-responsive" alt="" width=300 height=200 /> ';
-          echo'<a href="./menu_all.html">';
           echo'<div class="menu2-overlay">';
           echo'<input type="hidden" name="code" value="'.$f['f_id'].'" >';
           echo'<h4>'.$f['f_name'].'</h4>';
           echo'<p>'.$f['f_description'].'</p>';
+          echo'<div id="one" class="button" style="background-color: black; color: white; padding: 10px;">View More!</div>';
           echo'<span class="price">₹'.$f['f_price'].'</span>';
           echo'</div>';
           echo'</a>';
