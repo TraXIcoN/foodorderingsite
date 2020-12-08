@@ -129,6 +129,7 @@
                                                                 image)
                                 VALUES('{$fname}', {$fprice}, '{$fdesc}', {$fspecial}, {$fcat}, '{$fimage}')";
                                 $update=mysqli_query($conn, $query);
+                                echo "<meta http-equiv='refresh' content='0'>";
                                 if(!$update) {
                                 echo "ERROR WHILE INSERTING!";
                                 }
@@ -210,6 +211,8 @@
                      //                       if(btnclick==0){
                      //                       btnclick++;
                                             $("#add-entry-form0").show();
+
+                                            document.getElementById("#add-entry-form0").reset();
                      //                       }
                      /*                       else if(btnclick==1){
                                                 btnclick++;
@@ -231,5 +234,10 @@
 
 
                 </div>
+                <script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </body>
 </html>
