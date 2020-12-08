@@ -27,6 +27,7 @@
             session_start();
             $_SESSION["user_id"]=$user['c_id'];
             $_SESSION["user_name"]=$user['c_fname'];
+            $_SESSION["user_lname"]=$user['c_lname'];
             $_SESSION["logged"]=true;
             //echo $_SESSION["user_name"];
         } else {

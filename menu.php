@@ -6,41 +6,7 @@
         echo "Connection Error: " . mysqli_connect_error();
     } 
     
-    if (isset($_POST['code']) && $_POST['code']!=""){
-        $code = $_POST['code'];
-        $query="SELECT * FROM food where f_id={$code}";
-
-        $result = mysqli_query($conn, $query);
-        $row = mysqli_fetch_assoc($result);
-        $name = $row['f_name'];
-        $code = $row['f_id'];
-        $price = $row['f_price'];
-        $image = $row['image'];
-        $cartArray = array(
-                    $code=>array(
-                    'name'=>$name,
-                    'code'=>$code,
-                    'price'=>$price,
-                    'quantity'=>1,
-                    'image'=>$image)
-                  );
-
-        if(empty($_SESSION["shopping_cart"])) {
-          $_SESSION["shopping_cart"] = $cartArray;
-          $status = "<div class='box'>Product is added to your cart!</div>";
-        }else{
-          $array_keys = array_keys($_SESSION["shopping_cart"]);
-          if(in_array($code,$array_keys)) {
-            $status = "<div class='box' style='color:red;'>
-            Product is already added to your cart!</div>";  
-          } else {
-          $_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"],$cartArray);
-          $status = "<div class='box'>Product is added to your cart!</div>";
-          }
-
-          }
-          //print_r($_SESSION["shopping_cart"]);
-    }
+    include("addtocart.php");
 
 
 ?>
@@ -140,8 +106,8 @@ $('#modal-container').click(function(){
           echo'<input type="hidden" name="code" value="'.$f['f_id'].'" >';
           echo'<h4>'.$f['f_name'].'</h4>';
           echo'<p>'.$f['f_description'].'</p>';
-          echo'<button style="font-size: 18px; background-color: black; color: white; padding: 10px;"><a style="text-decoration: none; color: white;" href="review.php">Reviews</a></button>';
-          echo'<div id="one" class="button" style="background-color: black; color: white; padding: 10px;">View More</div>';
+          echo'<button style="font-size: 18px; background-color: black; color: white; padding: 10px;"><a style="text-decoration: none; color: white;" href="review.php?id='.$f['f_id'].'">Details</a></button>';
+          // echo'<div id="one" class="button" style="background-color: black; color: white; padding: 10px;">View More</div>';
           echo'<span class="price">₹'.$f['f_price'].'</span>';
           echo'</div>';
           echo'</a>';
