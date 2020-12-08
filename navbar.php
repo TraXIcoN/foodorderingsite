@@ -21,8 +21,12 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <?php if(isset($_SESSION['logged'])) {
-      echo '<li ><a class="navbut" style="text-decoration: none; margin-left: 10px;" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Orders</a></li>
-      <li ><a class="navbut" style="text-decoration: none; margin-left: 10px; margin-right: 10px;" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Cart</a></li>';
+        $GLOBALS['count']=0;
+      echo '<li ><a class="navbut" style="text-decoration: none; margin-left: 10px;" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Orders</a></li>';
+      if(!empty($_SESSION["shopping_cart"])) {
+        $GLOBALS['count'] = count(array_keys($_SESSION["shopping_cart"]));}
+
+      echo '<li ><a class="navbut" style="text-decoration: none; margin-left: 10px; margin-right: 10px;" href="cart.php"><i class="fa fa-shopping-cart" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Cart<span class="color: #ff4d4d; margin-bottom:10px; color: white;">'.$GLOBALS['count'].'</span></a></li>';
     }
       ?>
       <li style="color:white;padding-top:-20px;"><?php include('dropdown.php'); ?></li>

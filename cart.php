@@ -137,9 +137,11 @@ if(isset($_SESSION["shopping_cart"])){
                                     <th>Cart Subtotal</th>
                                     <td>
                                       <span class="amount">
-                                      <?php 
+                                      <?php if(isset($_SESSION["shopping_cart"])){
                                             echo "₹".$GLOBALS['total_price'];
-                                
+                                            }else {
+                                      echo "₹0";
+                                    }
                                       ?>
                               
                                       </span>
@@ -156,8 +158,13 @@ if(isset($_SESSION["shopping_cart"])){
                                     <td><strong>
                                       <span class="amount">
                                       <?php 
+                                      if(isset($_SESSION["shopping_cart"])){
                                       echo "₹".$GLOBALS['total_price'];
+                                    } else {
+                                      echo "₹0";
+                                    }
                                       ?>
+                                    
                                     </span>
                                   </strong>
                                 </td>
