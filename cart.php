@@ -129,7 +129,7 @@ if(isset($_SESSION["shopping_cart"])){
                      </table>
                      <div style="text-align: center; padding: 20px;">
                         <a href="menu.php"><button class="btn btn-default" type="submit">Update Cart</button></a>
-                        <button class="btn btn-success" type="submit" onclick="window.open('./shop_checkout.html', '_self')">Checkout</button>
+                        <button class="btn btn-success" type="submit" onclick="window.open('payment.php', '_self')">Checkout</button>
                      </div>
                      
                      <div class="cart_totals" style="text-align: center;">
