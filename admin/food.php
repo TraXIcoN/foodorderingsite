@@ -87,22 +87,22 @@
                                 <div class="add-entry-form-for-inline-display">
                                 <form action="food.php" class="pt-lg-2 pl-lg-2" style="display: none;" id="add-entry-form0" method="post">
                                     
-                                    <input type="text" name="food-name" required="required" style="width: 110px;" id="food-item-entered"
+                                    <input type="text" name="fname" required="required" style="width: 110px;" id="food-item-entered"
                                     class="" placeholder="Item name">
 
-                                    <input type="text" name="food-desc" style="width: 170px;" id="food-item-entered"
+                                    <input type="text" name="fdesc" style="width: 170px;" id="food-item-entered"
                                     class="" placeholder="Desc.">
 
-                                    <input type="number" name="food-special" min="0" max="1" style="width: 90px;" id="food-item-entered"
+                                    <input type="number" name="fspecial" min="0" max="1" style="width: 90px;" id="food-item-entered"
                                     class="" placeholder="Special?">
 
-                                    <input type="number" name="food-price" required="required" style="width: 70px;" id="food-item-entered"
+                                    <input type="number" name="fprice" required="required" style="width: 70px;" id="food-item-entered"
                                     class="" placeholder="Price">
 
-                                    <input type="number" name="food-cat" style="width: 90px;" id="food-item-entered"
+                                    <input type="number" name="fcat" style="width: 90px;" id="food-item-entered"
                                     class="" placeholder="Category">
 
-                                    <input type="text" name="food-image-path" style="width: 80px;" id="food-item-entered"
+                                    <input type="text" name="fimage" style="width: 80px;" id="food-item-entered"
                                     class="" placeholder="Img Path">
 
                                     <input type="submit" class="btn btn-dark ml-lg-3" value="Submit">
@@ -113,15 +113,15 @@
 
                         <?php 
                             if($_SERVER["REQUEST_METHOD"]=='POST'){
-                                $fname=$_POST['food-name'];
-                                $fprice=$_POST['food-price'];
-                                $fdesc=$_POST['food-desc'];
-                                $fspecial=$_POST['food-special'];
-                                $fimage=$_POST['food-image-path'];
-                                $fcat=$_POST['food-cat'];
+                                $fname=$_POST['fname'];
+                                $fprice=$_POST['fprice'];
+                                $fdesc=$_POST['fdesc'];
+                                $fspecial=$_POST['fspecial'];
+                                $fimage=$_POST['fimage'];
+                                $fcat=$_POST['fcat'];
                                 
                                 
-                                $query="INSERT INTO customer (  f_name,
+                                $query="INSERT INTO food (  f_name,
                                                                 f_price,
                                                                 f_description,
                                                                 f_special,
