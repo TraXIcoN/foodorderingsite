@@ -4,6 +4,42 @@
     if(!$conn) {
         echo "Connection Error: " . mysqli_connect_error();
     }
+
+    if (isset($_POST['code']) && $_POST['code']!=""){
+        $code = $_POST['code'];
+        $query="SELECT * FROM food where f_id={$code}";
+
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        $name = $row['f_name'];
+        $code = $row['f_id'];
+        $price = $row['f_price'];
+        $image = $row['image'];
+        $cartArray = array(
+                    $code=>array(
+                    'name'=>$name,
+                    'code'=>$code,
+                    'price'=>$price,
+                    'quantity'=>1,
+                    'image'=>$image)
+                  );
+
+        if(empty($_SESSION["shopping_cart"])) {
+          $_SESSION["shopping_cart"] = $cartArray;
+          
+        }else{
+          $array_keys = array_keys($_SESSION["shopping_cart"]);
+          if(in_array($code,$array_keys)) {
+            $status = "<div class='box' style='color:red;'>
+            Product is already added to your cart!</div>";  
+          } else {
+          $_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"],$cartArray);
+          $status = "<div class='box'>Product is added to your cart!</div>";
+          }
+
+          }
+          //print_r($_SESSION["shopping_cart"]);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -260,7 +296,11 @@
               <img src="'.$f['image'].'" alt="images" width=100 height=100>
           </div>
           <div class="details">
-              <h2>'.$f['f_name'].'</h2><br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
+              <h2>'.$f['f_name'].'</h2><br>
+              <form method="post" action=" ">
+              <input type="hidden" name="code" value="'.$f['f_id'].'" >
+              <button type="submit" class="btn btn-danger">ADD TO CART</button>
+              </form>
           </div>
         </div>';
 
