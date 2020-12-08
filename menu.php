@@ -5,7 +5,7 @@
     if(!$conn) {
         echo "Connection Error: " . mysqli_connect_error();
     } 
-
+    
     if (isset($_POST['code']) && $_POST['code']!=""){
         $code = $_POST['code'];
         $query="SELECT * FROM food where f_id={$code}";

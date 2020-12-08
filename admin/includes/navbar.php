@@ -91,7 +91,22 @@
             <li class="nav-item">
                 <a class="nav-link" href="tables.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>Customer Table</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="food.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Food Table</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="category.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Category Table</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tickets.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tickets table</span></a>
             </li>
 
             <!-- Divider -->
