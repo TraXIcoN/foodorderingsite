@@ -121,14 +121,8 @@
                                 $fcat=$_POST['food-cat'];
                                 
                                 
-                                $query="INSERT INTO customer (  f_name,
-                                                                f_price,
-                                                                f_description,
-                                                                f_special,
-                                                                cat_id,
-                                                                image)
-                                VALUES('{$fname}', {$fprice}, '{$fdesc}', {$fspecial}, {$fcat}, '{$fimage}')";
-                                $update=mysqli_query($conn, $query);
+                                $query="INSERT INTO food (f_name,f_price,f_description,f_special,cat_id,image) VALUES ('{$fname}',{$fprice}, '{$fdesc}', {$fspecial}, {$fcat}, '{$fimage}')";
+                                $update=mysqli_query($conn, $query) or die("Error: " . mysqli_error($conn));
                                 if(!$update) {
                                 echo "ERROR WHILE INSERTING!";
                                 }
