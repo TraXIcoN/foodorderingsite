@@ -257,7 +257,7 @@
         foreach($food as $f) {
           echo '<div class="card">
           <div class="imgBx">
-              <img src="'.$f['image'].'" alt="images" width=200 height=200>
+              <img src="'.$f['image'].'" alt="images" width=100 height=100>
           </div>
           <div class="details">
               <h2>'.$f['f_name'].'</h2><br><a href="#"><button class="btn btn-danger"></a>ADD TO CART</button></h2>
