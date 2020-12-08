@@ -146,7 +146,8 @@ $('#modal-container').click(function(){
           echo'</div>';
           echo'</a>';
           echo'</div>';
-          echo'<button type="submit" class="menu-more">+</button>';
+          echo'<button type="submit">Add to Cart</button>';
+          echo'<button type="submit" style="float: right;">Buy Now</button>';
           echo'</div>';
           echo '</form>';
         }
