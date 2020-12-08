@@ -5,9 +5,11 @@
   }
   if (isset($_POST['action']) && $_POST['action']=="remove"){
 if(!empty($_SESSION["shopping_cart"])) {
-  foreach($_SESSION["shopping_cart"] as $key => $value) {
-    if($_POST["code"] == $key){
-    unset($_SESSION["shopping_cart"][$key]);
+  foreach($_SESSION["shopping_cart"] as $key=>$value) {
+    echo $_POST["code"]."  ".$value['code'];
+    if($_POST["code"] == $value['code']){
+      
+      array_splice($_SESSION["shopping_cart"], $key, 1);
     $status = "<div class='box' style='color:red;'>
     Product is removed from your cart!</div>";
     }
@@ -16,6 +18,7 @@ if(!empty($_SESSION["shopping_cart"])) {
       }   
     }
 }
+
 
 if (isset($_POST['action']) && $_POST['action']=="change"){
   foreach($_SESSION["shopping_cart"] as &$value){
@@ -53,13 +56,11 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                </div>
             </div>
          </section>
-         <?php
-if(isset($_SESSION["shopping_cart"])){
-    $GLOBALS['total_price'] = 0;
-?>
+         
          <section class="shop-content">
             <div class="container">
                <h4 class="text-left">Cart</h4>
+
                <br>
                <div class="row">
                   <div class="col">
@@ -74,6 +75,10 @@ if(isset($_SESSION["shopping_cart"])){
                               <th>Total</th>
                            </tr>
                         </thead>
+                        <?php
+if(isset($_SESSION["shopping_cart"])){
+    $GLOBALS['total_price'] = 0;
+?>
                           <?php 
                            
                             foreach($_SESSION["shopping_cart"] as $cartArr) {
@@ -84,12 +89,12 @@ if(isset($_SESSION["shopping_cart"])){
                                 <form method='post' action=''>
                                 <input type='hidden' name='code' value="<?php echo $cartArr["code"]; ?>" />
                                 <input type='hidden' name='action' value="remove" />
-                                <button type='submit' class='remove'><a href="#"><i class="fa fa-times"></i></a></button>
+                                <button type='submit' class='remove'><i class="fa fa-times"></i></button>
                                 </form>
                                  
                               </td>
                               <td>
-                                 <a href="./shop_single_full.html"><img src="<?php echo $cartArr['image']; ?>" alt="" height="90" width="90"></a>
+                                 <a href="./shop_single_full.html"><img src="<?php echo $cartArr['image']; ?>" alt="" height="100" width="100"></a>
                               </td>
                               <td>
                                  <a href="./shop_single_full.html"><?php echo $cartArr['name']; ?></a>
