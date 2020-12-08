@@ -1,9 +1,32 @@
 <?php 
-   session_start();
-   if(!isset($_SESSION['logged'])) {
-     header('location: login.php');
-   }
-   ?>
+  session_start();
+  if(!isset($_SESSION['logged'])) {
+    header('location: login.php');
+  }
+  if (isset($_POST['action']) && $_POST['action']=="remove"){
+if(!empty($_SESSION["shopping_cart"])) {
+  foreach($_SESSION["shopping_cart"] as $key => $value) {
+    if($_POST["code"] == $key){
+    unset($_SESSION["shopping_cart"][$key]);
+    $status = "<div class='box' style='color:red;'>
+    Product is removed from your cart!</div>";
+    }
+    if(empty($_SESSION["shopping_cart"]))
+    unset($_SESSION["shopping_cart"]);
+      }   
+    }
+}
+
+if (isset($_POST['action']) && $_POST['action']=="change"){
+  foreach($_SESSION["shopping_cart"] as &$value){
+    if($value['code'] === $_POST["code"]){
+        $value['quantity'] = $_POST["quantity"];
+        break; // Stop the loop after we've found the product
+    }
+}
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -30,6 +53,10 @@
                </div>
             </div>
          </section>
+         <?php
+if(isset($_SESSION["shopping_cart"])){
+    $GLOBALS['total_price'] = 0;
+?>
          <section class="shop-content">
             <div class="container">
                <h4 class="text-left">Cart</h4>
@@ -47,57 +74,59 @@
                               <th>Total</th>
                            </tr>
                         </thead>
-                        <tbody>
-                           <tr>
+                          <?php 
+                           
+                            foreach($_SESSION["shopping_cart"] as $cartArr) {
+                            
+                            ?>
+                              <tr>
                               <td>
-                                 <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                                <form method='post' action=''>
+                                <input type='hidden' name='code' value="<?php echo $cartArr["code"]; ?>" />
+                                <input type='hidden' name='action' value="remove" />
+                                <button type='submit' class='remove'><a href="#"><i class="fa fa-times"></i></a></button>
+                                </form>
+                                 
                               </td>
                               <td>
-                                 <a href="./shop_single_full.html"><img src="img/menu/2/gulabjamun.jpg" alt="" height="90" width="90"></a>
+                                 <a href="./shop_single_full.html"><img src="<?php echo $cartArr['image']; ?>" alt="" height="90" width="90"></a>
                               </td>
                               <td>
-                                 <a href="./shop_single_full.html">Gulabjamun</a>
+                                 <a href="./shop_single_full.html"><?php echo $cartArr['name']; ?></a>
+                              </td>
+                              <td>₹
+                                 <span class="amount" id="price"><?php echo $cartArr['price']; ?></span>
                               </td>
                               <td>
-                                 <span class="amount">Rs 69.99</span>
+                                <form method='post' action=''>
+                                  <input type='hidden' name='code' value="<?php echo $cartArr["code"]; ?>" />
+                                  <input type='hidden' name='action' value="change" />
+                                  <select name='quantity' class='quantity' onChange="this.form.submit()">
+                                  <option <?php if($cartArr['quantity']==1){ echo "selected";} ?> value="1">1</option>
+                                  <option <?php if($cartArr['quantity']==2){ echo "selected";} ?> value="2">2</option>
+                                  <option <?php if($cartArr['quantity']==3){ echo "selected";} ?> value="3">3</option>
+                                  <option <?php if($cartArr['quantity']==4){ echo "selected";} ?> value="4">4</option>
+                                  <option <?php if($cartArr['quantity']==5){ echo "selected";} ?> value="5">5</option>
+                                  </select>
+                                  
+                                </form>
                               </td>
                               <td>
-                                 <div class="quantity">
-                                    <input type="number" class="cart_quant">
-                                 </div>
-                              </td>
-                              <td>
-                                 <span class="amount">Rs 69.99</span>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>
-                                 <a href="#" class="remove"><i class="fa fa-times"></i></a>
-                              </td>
-                              <td>
-                                 <a href="./shop_single_full.html"><img src="img/menu/2/3.jpg" alt="" height="90" width="90"></a>
-                              </td>
-                              <td>
-                                 <a href="./shop_single_full.html">Dosa</a>
-                              </td>
-                              <td>
-                                 <span class="amount">Rs 119.99</span>
-                              </td>
-                              <td>
-                                 <div class="quantity">
-                                    <input type="number" class="cart_quant">
-                                 </div>
-                              </td>
-                              <td>
-                                 <span class="amount">Rs 119.99</span>
+                                  ₹
+                                 <span class="amount" id="total"><?php echo $cartArr['price']*$cartArr['quantity'];  ?></span>
                               </td>
                            </tr>
+                          
+                           
+                           <?php $GLOBALS['total_price'] += ($cartArr["price"]*$cartArr["quantity"]); }} ?>
                         </tbody>
+                        
                      </table>
                      <div style="text-align: center; padding: 20px;">
-                        <button class="btn btn-default" type="submit">Update Cart</button>
+                        <a href="menu.php"><button class="btn btn-default" type="submit">Update Cart</button></a>
                         <button class="btn btn-success" type="submit" onclick="window.open('./shop_checkout.html', '_self')">Checkout</button>
                      </div>
+                     
                      <div class="cart_totals" style="text-align: center;">
                         <div class="col">
                            <h4 class="text-left">Cart Totals</h4>
@@ -106,7 +135,17 @@
                               <tbody>
                                  <tr>
                                     <th>Cart Subtotal</th>
-                                    <td><span class="amount">£190.00</span></td>
+                                    <td>
+                                      <span class="amount">
+                                      <?php if(isset($_SESSION["shopping_cart"])){
+                                            echo "₹".$GLOBALS['total_price'];
+                                            }else {
+                                      echo "₹0";
+                                    }
+                                      ?>
+                              
+                                      </span>
+                                    </td>
                                  </tr>
                                  <tr>
                                     <th>Shipping and Handling</th>
@@ -116,23 +155,35 @@
                                  </tr>
                                  <tr>
                                     <th>Order Total</th>
-                                    <td><strong><span class="amount">£190.00</span></strong> </td>
+                                    <td><strong>
+                                      <span class="amount">
+                                      <?php 
+                                      if(isset($_SESSION["shopping_cart"])){
+                                      echo "₹".$GLOBALS['total_price'];
+                                    } else {
+                                      echo "₹0";
+                                    }
+                                      ?>
+                                    
+                                    </span>
+                                  </strong>
+                                </td>
                                  </tr>
                               </tbody>
                            </table>
+
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-         <?php 
-            if(isset($_SESSION["shopping_cart"])) {
-            print_r($_SESSION["shopping_cart"]); }
-            ?>
+         
          <?php include('footer.php'); ?>
       </div>
+    </div>
    </body>
+   
    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/jquery-1.11.2.min.js"></script>
    <script src="js/vendor/bootstrap.min.js"></script>
    <script src="js/vendor/jquery.flexslider-min.js"></script>
