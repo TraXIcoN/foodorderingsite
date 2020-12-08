@@ -4,7 +4,46 @@
     $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
     if(!$conn) {
         echo "Connection Error: " . mysqli_connect_error();
-    } ?>
+    } 
+
+    if (isset($_POST['code']) && $_POST['code']!=""){
+        $code = $_POST['code'];
+        $query="SELECT * FROM food where f_id={$code}";
+
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        $name = $row['f_name'];
+        $code = $row['f_id'];
+        $price = $row['f_price'];
+        $image = $row['image'];
+        $cartArray = array(
+                    $code=>array(
+                    'name'=>$name,
+                    'code'=>$code,
+                    'price'=>$price,
+                    'quantity'=>1,
+                    'image'=>$image)
+                  );
+
+        if(empty($_SESSION["shopping_cart"])) {
+          $_SESSION["shopping_cart"] = $cartArray;
+          $status = "<div class='box'>Product is added to your cart!</div>";
+        }else{
+          $array_keys = array_keys($_SESSION["shopping_cart"]);
+          if(in_array($code,$array_keys)) {
+            $status = "<div class='box' style='color:red;'>
+            Product is already added to your cart!</div>";  
+          } else {
+          $_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"],$cartArray);
+          $status = "<div class='box'>Product is added to your cart!</div>";
+          }
+
+          }
+          print_r($_SESSION["shopping_cart"]);
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,19 +102,23 @@
         $food = mysqli_fetch_all($result, MYSQLI_ASSOC);
         //print_r($food);
         foreach($food as $f) {
+          echo '<form method="POST" action=" ">';
           echo '<div class="menu-item2 col-sm-4 col-xs-12 '.$f['cat_name'].' clearfix">';
           echo'<div class="menu-info">';
+
           echo'<img src="'.$f['image'].'" class="img-responsive" alt="" width=300 height=200 /> ';
           echo'<a href="./menu_all.html">';
           echo'<div class="menu2-overlay">';
+          echo'<input type="hidden" name="code" value="'.$f['f_id'].'" >';
           echo'<h4>'.$f['f_name'].'</h4>';
           echo'<p>'.$f['f_description'].'</p>';
           echo'<span class="price">₹'.$f['f_price'].'</span>';
           echo'</div>';
           echo'</a>';
           echo'</div>';
-          echo'<a href="./menu_all.html" class="menu-more">+</a>';
+          echo'<button type="submit" class="menu-more">+</button>';
           echo'</div>';
+          echo '</form>';
         }
         // free the $result from memory (good practise)
         mysqli_free_result($result);

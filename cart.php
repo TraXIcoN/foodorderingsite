@@ -84,5 +84,6 @@ if(!isset($_SESSION['logged'])) {
 
 
   </div>
+  <?php print_r($_SESSION["shopping_cart"]); ?>
 </body>
 </html>
