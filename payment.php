@@ -1,3 +1,11 @@
+<?php 
+
+    session_start();
+    $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
+    if(!$conn) {
+        echo "Connection Error: " . mysqli_connect_error();
+    } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
