@@ -22,7 +22,7 @@
     <ul class="nav navbar-nav navbar-right">
       <?php if(isset($_SESSION['logged'])) {
         $GLOBALS['count']=0;
-      echo '<li ><a class="navbut" style="text-decoration: none; margin-left: 10px;" href="cart.php"><i class="fa fa-first-order" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Orders</a></li>';
+      echo '<li ><a class="navbut" style="text-decoration: none; margin-left: 10px;" href="order.php"><i class="fa fa-first-order" style="margin-right:3px; text-decoration: none; color: white;" aria-hidden="true"></i>Orders</a></li>';
       if(!empty($_SESSION["shopping_cart"])) {
         $GLOBALS['count'] = count(array_keys($_SESSION["shopping_cart"]));}
 
