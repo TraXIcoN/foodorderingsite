@@ -49,36 +49,45 @@
    	 }
    	else {
 
-          // require 'PHPMailer\PHPMailer';
+          
+         
+         require_once('PHPMailer-5.2-stable/PHPMailerAutoload.php');
 
-          // $mail = new PHPMailer;
+         
+         $mail = new PHPMailer();
+          $mail->IsSMTP(); 
 
-          // //$mail->SMTPDebug = 3;                                // Enable verbose debug output
+          $mail->CharSet="UTF-8";
+          $mail->Host = "smtp.gmail.com";
+          $mail->SMTPDebug = 1; 
+          $mail->Port = 465 ; //465 or 587
 
-          // $mail->isSMTP();                                      // Set mailer to use SMTP
-          // $mail->Host = 'smtp.gmail.com';                        // Specify main and backup SMTP servers
-          // //$mail->Host = 'smtp.mandrillapp.com';
-          // $mail->SMTPAuth = true;                               // Enable SMTP authentication
-          // $mail->Username = '2018.bhavesh.lohana@ves.ac.in';  // SMTP username
-          // $mail->Password = 'bhavesh@126';                           // SMTP password
-          // $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-          // $mail->Port = 587;                                    // TCP port to connect to
+           $mail->SMTPSecure = 'ssl';  
+          $mail->SMTPAuth = true; 
+          $mail->IsHTML(true);
 
-          // $mail->setFrom('2018.bhavesh.lohana@ves.ac.in', 'Mailer');
-          // $mail->addAddress('2018.bhavesh.lohana@ves.ac.in', 'bhavesh@126');     // Add a recipient
+          //Authentication
+          $mail->Username = "headovermeals122@gmail.com";
+          $mail->Password = "headovermeals@123";
 
-          // $mail->isHTML(true);                                  // Set email format to HTML
+          //Set Params
+          $mail->SetFrom("headovermeals122@gmail.com");
+          $mail->AddAddress("{$row['c_email']}");
+          $mail->Subject = "Your Order #{$o_id} has been placed!";
+          $finalOrder="Order:<br>";
+          foreach($_SESSION["shopping_cart"] as $val) {
+            
+            $finalOrder.="<br><b>Name:</b> <i>{$val['name']}</i><br><b>Quantity:</b> <i>{$val['quantity']}</i><br><b>Price per unit:</b> <i>₹{$val['price']}</i><br>";
+          }
+          $finalOrder.="<h3 style='color: #FF4D4D;''><b>TOTAL AMOUNT: ₹{$total}</b></h3>";
+          $mail->Body = $finalOrder;
 
-          // $mail->Subject = 'Here is the subject';
-          // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-          // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-          // if (!$mail->send()) {
-          //     echo 'Message could not be sent.';
-          //     echo 'Mailer Error: ' . $mail->ErrorInfo;
-          // } else {
-          //     echo 'Message has been sent';
-          // }
+           if(!$mail->Send()) {
+              echo "Mailer Error: " . $mail->ErrorInfo;
+           } else {
+              echo "Message has been sent";
+           }
     
    		unset($_SESSION['shopping_cart']);
    		$_SESSION['shopping_cart']=array();

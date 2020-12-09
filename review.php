@@ -81,7 +81,7 @@
                             <?php echo $row['f_description']; ?></p>
                             <div class="quantity">
                                 <!-- <input type="number" placeholder="1"> -->
-                                <a href="./shop_checkout.html" class="btn btn-success left-space-sm pull-right">Buy Now</a>
+                                <!--  -->
 								<form method="post" action=" ">
 								<input type="hidden" name="code" value="<?php echo $row['f_id']; ?>" >
 								<button type="submit" class="btn btn-danger pull-right">ADD TO CART</button>
