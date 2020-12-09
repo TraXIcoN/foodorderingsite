@@ -74,7 +74,7 @@
           $mail->SetFrom("headovermeals122@gmail.com");
           $mail->AddAddress("{$row['c_email']}");
           $mail->Subject = "Your Order #{$o_id} has been placed!";
-          $finalOrder="Order:<br>";
+          $finalOrder="<h4>Order:</h4><br>";
           foreach($_SESSION["shopping_cart"] as $val) {
             
             $finalOrder.="<br><b>Name:</b> <i>{$val['name']}</i><br><b>Quantity:</b> <i>{$val['quantity']}</i><br><b>Price per unit:</b> <i>₹{$val['price']}</i><br>";
