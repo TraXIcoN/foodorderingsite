@@ -4,13 +4,19 @@
         echo "Connection Error: " . mysqli_connect_error();
     } 
 
-$id = $_GET['f_id']; // get id through query string
+$fid = $_GET['ff_id']; // get id through query string
 
- $query="DELETE FROM food where f_id = '$id'";
+echo $fid;
+
+  $query="DELETE FROM food where f_id = '$fid'";
  $update=mysqli_query($conn, $query);
 
-$previousPage = $_SERVER["HTTP_REFERER"];
-header('Location: '.$previousPage);
+   
     if(!$update) {
     echo "ERROR WHILE DELETING!";
-    }
+    }  
+
+  $previousPage = $_SERVER["HTTP_REFERER"];
+  header('Location: '.$previousPage);
+
+    ?>

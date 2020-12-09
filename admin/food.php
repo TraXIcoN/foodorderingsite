@@ -54,19 +54,21 @@
 
                                             foreach($foods as $food) {
                                                 echo "<tr>
-                                                <td>{$food['f_id']}</td>
-                                                <td>{$food['f_name']}</td>
-                                                <td>{$food['f_description']}</td>
-                                                <td>{$food['f_special']}</td>
-                                                <td>{$food['f_price']}</td>
-                                                <td>{$food['cat_id']}</td>
-                                                <td>{$food['image']}</td>";
-                                                print '<td><a href="delete.php?id=<?php echo $foods[\'f_id\'];?>" id="delete-btn">Delete</a></td>
-                                            </tr>';
+                                                <td contenteditable=\"true\">{$food['f_id']}</td>
+                                                <td contenteditable=\"true\">{$food['f_name']}</td>
+                                                <td contenteditable=\"true\">{$food['f_description']}</td>
+                                                <td contenteditable=\"true\">{$food['f_special']}</td>
+                                                <td contenteditable=\"true\">{$food['f_price']}</td>
+                                                <td contenteditable=\"true\">{$food['cat_id']}</td>
+                                                <td contenteditable=\"true\">{$food['image']}</td>";
+                                                echo "<td><a href='delete.php?ff_id=$food[f_id]'>Delete</a></td>
+                                            </tr>";
                                             }
 
                                         ?>
-                                                  
+                                        
+
+
                                     </tbody>
 
                                 </table>
