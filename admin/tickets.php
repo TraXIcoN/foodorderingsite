@@ -9,7 +9,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Tickets Table</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<?php 
@@ -32,6 +33,7 @@
                                             <th>Ticket ID</th>
                                             <th>Query</th>
                                             <th>Response</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     
@@ -49,8 +51,9 @@
                                                 <td>{$ticket['c_id']}</td>
                                                 <td>{$ticket['ticket_id']}</td>
                                                 <td>{$ticket['ticket_query']}</td>
-                                                <td>{$ticket['ticket_response']}</td>
-                                                
+                                                <td>{$ticket['ticket_response']}</td>";
+                                                echo "<td><a href='delete-tickets.php?
+                                                      t_id=$ticket[ticket_id]'>Delete</a></td>
                                                 </tr>";
                                             }
 
@@ -60,6 +63,9 @@
                             </div>
                         </div>
                     </div>
+
+
+
 
                 </div>
 </body>

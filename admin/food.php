@@ -39,6 +39,7 @@
                                             <th>Category</th>
                                             <th>Image Path</th>
                                             <th></th>
+                                            <th></th>
                                             
                                         </tr>
                                     </thead>
@@ -54,15 +55,17 @@
 
                                             foreach($foods as $food) {
                                                 echo "<tr>
-                                                <td contenteditable=\"true\">{$food['f_id']}</td>
+                                                <td>{$food['f_id']}</td>
                                                 <td contenteditable=\"true\">{$food['f_name']}</td>
                                                 <td contenteditable=\"true\">{$food['f_description']}</td>
                                                 <td contenteditable=\"true\">{$food['f_special']}</td>
                                                 <td contenteditable=\"true\">{$food['f_price']}</td>
                                                 <td contenteditable=\"true\">{$food['cat_id']}</td>
                                                 <td contenteditable=\"true\">{$food['image']}</td>";
-                                                echo "<td><a href='delete.php?ff_id=$food[f_id]'>Delete</a></td>
+                                                echo "<td><a href='modify.php?ff_id=$food[f_id]'>Edit</a></td>";
+                                                echo "<td><a href='delete-food.php?ff_id=$food[f_id]'>Delete</a></td>
                                             </tr>";
+
                                             }
 
                                         ?>
@@ -85,7 +88,7 @@
                         <tr>
                             <td style="display: flex;">
                                 <div class="add-entry-btn-for-inline-display">
-                                <button type="button" id="add-entry-button" class="btn btn-dark" style="margin-bottom: 100px;">
+                                <button type="button" id="add-entry-button-food" class="btn btn-dark" style="margin-bottom: 100px;">
                                 Add an Entry</button>
                                 </div>
 
@@ -212,10 +215,10 @@
                                     <script type="text/javascript">
                                         var btnclick = 0;
                                         $(document).ready(function() {
-                                          $("#add-entry-button").click(function() {
+                                          $("#add-entry-button-food").click(function() {
                      //                       if(btnclick==0){
                      //                       btnclick++;
-                                            $("#add-entry-form0").show();
+                                            $("#add-entry-form0").toggle();
 
                                             document.getElementById("#add-entry-form0").reset();
                      //                       }
@@ -237,8 +240,11 @@
                                 </div>
                         </table>
 
+                        
 
-                </div>
+
+                </div>          
+
 
 
 
