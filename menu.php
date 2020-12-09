@@ -42,7 +42,7 @@
 <div class="row">
 <div class="col-md-12">
 <div class="page-header wow fadeInDown">
-<h1>Overlay<small>These fine folks trusted the award winning restaurant.</small></h1>
+<h1><small>These fine folks trusted the award winning restaurant.</small></h1>
 </div>
 </div>
 </div>
@@ -59,20 +59,7 @@
 </div>
 </div>
 </div>
-<!--------------popup---------------->
-<div id="modal-container">
-  <div class="modal-background">
-    <div class="modal">
-      <h2>I'm a Modal</h2>
-      <p>Hear me roar.</p>
-      <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-          <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
-      </svg>
-      <button style="background-color: black; color: white; padding: 10px;"><a href="review.php" style="text-decoration: none; color: white;">Write A Review</a></button>
-    </div>
-  </div>
-</div>
-<!----------------------------->
+<!--------------Menu--------------->
 <div class="row menu-items2 content">
   <?php 
     $query="SELECT * FROM food INNER JOIN category ON food.cat_id=category.cat_id";
@@ -84,7 +71,7 @@
         //print_r($food);
         foreach($food as $f) {
           echo '<form method="POST" action=" ">';
-          echo '<div class="menu-item2 col-sm-4 col-xs-12 '.$f['cat_name'].' clearfix">';
+          echo '<div class="menu-item2 col-sm-6 col-xs-12 col-md-4 '.$f['cat_name'].' clearfix">';
           echo'<div class="menu-info buttons">';
 
           echo'<img src="'.$f['image'].'" class="img-responsive" alt="" width=300 height=200 /> ';
@@ -92,7 +79,7 @@
           echo'<input type="hidden" name="code" value="'.$f['f_id'].'" >';
           echo'<h4>'.$f['f_name'].'</h4>';
           echo'<p>'.$f['f_description'].'</p>';
-          echo'<button style="font-size: 18px; background-color: black; color: white; padding: 10px;"><a style="text-decoration: none; color: white;" href="review.php?id='.$f['f_id'].'">Details</a></button>';
+          echo'<button style="font-size: 18px; background-color: black; color: white;"><a style="text-decoration: none; padding: 10px; color: white;" href="review.php?id='.$f['f_id'].'">Details</a></button>';
           // echo'<div id="one" class="button" style="background-color: black; color: white; padding: 10px;">View More</div>';
           echo'<span class="price">₹'.$f['f_price'].'</span>';
           echo'</div>';
