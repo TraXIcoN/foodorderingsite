@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    //error_reporting(0);
+    error_reporting(0);
     $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
     if(!$conn) {
         echo "Connection Error: " . mysqli_connect_error();
