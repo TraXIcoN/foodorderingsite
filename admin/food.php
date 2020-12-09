@@ -38,6 +38,7 @@
                                             <th>Price(in ₹)</th>
                                             <th>Category</th>
                                             <th>Image Path</th>
+                                            <th></th>
                                             
                                         </tr>
                                     </thead>
@@ -59,11 +60,21 @@
                                                 <td>{$food['f_special']}</td>
                                                 <td>{$food['f_price']}</td>
                                                 <td>{$food['cat_id']}</td>
-                                                <td>{$food['image']}</td>
-                                                </tr>";
+                                                <td>{$food['image']}</td>";
+                                                print '<td><a href="delete.php?id=<?php echo $food[\'fid\'];?>" id="delete-btn">Delete</a></td>
+                                            </tr>';
                                             }
 
                                         ?>
+
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                            $("#delete-btn").click(function() {
+
+                                                }
+                                            }
+                                        </script>
+                                                  
                                     </tbody>
 
                                 </table>
@@ -80,7 +91,7 @@
                         <tr>
                             <td style="display: flex;">
                                 <div class="add-entry-btn-for-inline-display">
-                                <button type="button" id="add-entry-button" class="btn btn-dark">
+                                <button type="button" id="add-entry-button" class="btn btn-dark" style="margin-bottom: 100px;">
                                 Add an Entry</button>
                                 </div>
 
@@ -234,9 +245,12 @@
 
 
                 </div>
+
+
+
                 <script>
-if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
+                if ( window.history.replaceState ) {
+                  window.history.replaceState( null, null, window.location.href );
 }
 </script>
 </body>
