@@ -27,7 +27,7 @@
                 </div>
             </div>
         </section>
-        <section class="shop-content">
+        <section class="shop-content" style="background-color: #e7e7e7;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">

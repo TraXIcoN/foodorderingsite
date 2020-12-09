@@ -90,7 +90,7 @@ $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
 </head>
 <body>
   <?php include('navbar.php'); ?>
-  <div class="main-content">
+  <div class="main-content" style="background-color: #e7e7e7;">
     <!-- Top navbar -->
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url('images/profileback.png'); background-size: cover; background-position: center top;">
@@ -102,7 +102,7 @@ $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white" style="text-align: left;">Hello User</h1>
             <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-            <a href="#!" class="btn btn-info">My Orders</a>
+            <a href="order.php" class="btn btn-info">My Orders</a>
           </div>
         </div>
       </div>

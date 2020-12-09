@@ -84,7 +84,7 @@
                                 <!--  -->
 								<form method="post" action=" ">
 								<input type="hidden" name="code" value="<?php echo $row['f_id']; ?>" >
-								<button type="submit" class="btn btn-danger pull-right">ADD TO CART</button>
+								<button type="submit" class="btn pull-right" style="background-color: black; color: white;">ADD TO CART</button>
 								</form>
                             </div>
                         </div>
@@ -172,7 +172,7 @@
                                         <div class="clearfix space20"></div>
                                         <textarea name="text" id="text" class="input-md form-control" rows="6" placeholder="Add review.." maxlength="400"></textarea>
                                         <br>
-                                        <button type="submit" class="btn" style="background-color: #ff4d4d; color: white;">
+                                        <button type="submit" class="btn" style="background-color: black; color: white;">
                                             Submit Review
                                         </button>
                                     </form>

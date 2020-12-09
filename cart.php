@@ -36,7 +36,13 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
       <meta charset="utf-8">
       <title>cart</title>
       <?php include('head.php'); ?>
-  </style>
+      <style type="text/css">
+        table th{
+      background-color: black; 
+      color: white;
+    }
+      </style>
+      
    </head>
    <body>
       <div class="body">
@@ -53,7 +59,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
             </div>
          </section>
          
-         <section class="shop-content">
+         <section class="shop-content" style="background-color: #e7e7e7;">
             <div class="container">
                <h4 class="text-left">Cart</h4>
 
@@ -124,7 +130,7 @@ if(isset($_SESSION["shopping_cart"])){
                         
                      </table>
                      <div style="text-align: center; padding: 20px;">
-                        <a href="menu.php"><button class="btn btn-default" type="submit">Update Cart</button></a>
+                        <a href="menu.php"><button class="btn" style="background-color: black; color: white;" type="submit">Update Cart</button></a>
                         <a href="payment.php?total=<?php echo $GLOBALS['total_price']."&number_of_items=".count($_SESSION['shopping_cart']); ?>"><button class="btn btn-success" type="submit">Checkout</button></a>
                      </div>
                      
