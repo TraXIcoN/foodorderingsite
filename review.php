@@ -25,7 +25,7 @@
 
 		$insertQuery="INSERT INTO review(f_id, c_id, r_rating, r_description) VALUES({$f_id}, {$c_id}, {$rating}, '{$text}')";
 
-		$insertResult = mysqli_query($conn, $insertQuery) or die("Error: " . mysqli_error($conn));
+		$insertResult = mysqli_query($conn, $insertQuery);
 
 	}
 ?>

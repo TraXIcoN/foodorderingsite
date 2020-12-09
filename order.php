@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    //error_reporting(0);
     $conn=mysqli_connect("localhost", "bhavesh", "test123", "foodorderingsite");
     if(!$conn) {
         echo "Connection Error: " . mysqli_connect_error();
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Tomato Responsive Restaurant HTML5 Template</title>
+        <title>Orders | Head Over Meals</title>
         <?php include('head.php'); ?>
     </head>
     <body>
@@ -34,71 +35,53 @@
                         <table class="cart-table account-table table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Order</th>
-                                    <th>Date</th>
+                                    <th>Total Price</th>
+                                    <th>Number of items</th>
                                     <th>Status</th>
-                                    <th>Total</th>
-                                    <th></th>
+                                    <th>Order Time</th>
+                                    <th>Delivery ID</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                            	<?php 
+                            		$query="SELECT o_price, o_no_of_items, o_status, o_time, d_id
+                            		 FROM orders
+                            		 INNER JOIN delivery
+                            		 ON orders.o_id=delivery.o_id
+                            		 WHERE orders.c_id={$_SESSION["user_id"]}
+                            		 ORDER BY orders.o_id desc";
+                            		$result = mysqli_query($conn, $query);
+                            		$orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                            		foreach($orders as $row) {
+                            			echo "<tr>
                                     <td>
-                                        900
+                                        {$row['o_price']}
                                     </td>
                                     <td>
-                                        June 15, 2015
+                                        {$row['o_no_of_items']}
                                     </td>
                                     <td>
-                                        Delivered
+                                        {$row['o_status']}
                                     </td>
                                     <td>
-                                        &pound;173 for 4 items
+                                        {$row['o_time']}
                                     </td>
                                     <td>
-                                        <a href="./shop_single_full.html">View</a>
+                                    	{$row['d_id']}
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        873
-                                    </td>
-                                    <td>
-                                        June 02, 2015
-                                    </td>
-                                    <td>
-                                        Delivered
-                                    </td>
-                                    <td>
-                                        &pound;55 for 2 items
-                                    </td>
-                                    <td>
-                                        <a href="./shop_single_full.html">View</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        629
-                                    </td>
-                                    <td>
-                                        March 23, 2015
-                                    </td>
-                                    <td>
-                                        Delivered
-                                    </td>
-                                    <td>
-                                        &pound;599 for 14 items
-                                    </td>
-                                    <td>
-                                        <a href="./shop_single_full.html">View</a>
-                                    </td>
-                                </tr>
+                                </tr>";
+                            		}
+   									
+                            	
+                            	?>
+                                
+                                
                             </tbody>
                         </table>
                         <br>
                         <br>
                         <br>
-                        <div class="ma-address">
+                        <!-- <div class="ma-address">
                             <h3 class="text-left">My Addresses</h3>
                             <p>The following addresses will be used on the checkout page by default.</p>
                             <div class="row">
@@ -127,7 +110,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

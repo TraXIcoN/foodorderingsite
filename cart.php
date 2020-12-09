@@ -129,7 +129,7 @@ if(isset($_SESSION["shopping_cart"])){
                      </table>
                      <div style="text-align: center; padding: 20px;">
                         <a href="menu.php"><button class="btn btn-default" type="submit">Update Cart</button></a>
-                        <a href="payment.php?total=<?php echo $GLOBALS['total_price']; ?>"><button class="btn btn-success" type="submit">Checkout</button></a>
+                        <a href="payment.php?total=<?php echo $GLOBALS['total_price']."&number_of_items=".count($_SESSION['shopping_cart']); ?>"><button class="btn btn-success" type="submit">Checkout</button></a>
                      </div>
                      
                      <div class="cart_totals" style="text-align: center;">
