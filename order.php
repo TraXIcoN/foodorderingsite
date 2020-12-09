@@ -11,6 +11,7 @@
     <head>
         <title>Orders | Head Over Meals</title>
         <?php include('head.php'); ?>
+  </style>
     </head>
     <body>
         <?php include('navbar.php'); ?>
