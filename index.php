@@ -149,7 +149,7 @@
       position: absolute;
       left: 10px;
       right: 10px;
-      bottom: 10px;
+      bottom: 20px;
       height: 60px;
       text-align: center;
       z-index: 54;
@@ -262,10 +262,10 @@
               <img src="'.$f['image'].'" alt="images" width=100 height=100>
           </div>
           <div class="details">
-              <h2>'.$f['f_name'].'</h2><br>
+              <h2>'.$f['f_name'].'</h2>
               <form method="post" action=" ">
               <input type="hidden" name="code" value="'.$f['f_id'].'" >
-              <button type="submit" class="btn btn-danger">ADD TO CART</button>
+              <button type="submit" class="btn" style="background-color: black; color: white;">ADD TO CART</button>
               </form>
           </div>
         </div>';
