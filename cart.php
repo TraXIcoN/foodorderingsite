@@ -36,11 +36,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
       <meta charset="utf-8">
       <title>cart</title>
       <?php include('head.php'); ?>
-      <style type="text/css">
-         .cart_quant{
-         border: double;
-         }
-      </style>
+  </style>
    </head>
    <body>
       <div class="body">

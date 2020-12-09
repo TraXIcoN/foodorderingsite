@@ -28,19 +28,40 @@
 <head>
 	<title>Tickets | Head Over Meals</title>
 	<?php include("head.php"); ?>
+	<style type="text/css">
+		.issuebtn{
+			background-color: black; 
+			color: white;
+			margin-top: 40px;
+		}
+		.issuebtnn{
+			border-color: black;
+		}
+	</style>
 </head>
 <body>
 	<?php include("navbar.php"); ?>
-	<br>
-	<br><br>
+
+<section class="page_header">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<h2 class="text-uppercase">Tickets</h2>
+<p>File a query if you have any!</p>
+</div>
+</div>
+</div>
+</section>
 
 	<section>
+		<div class="container">
+			<div style="margin-top: 40px;">
 		<table class="table">
 		 
 		    <tr>
-		      <th scope="col">Ticket ID</th>
-		      <th scope="col">Ticket Issue</th>
-		      <th scope="col">Ticket Response</th>
+		      <th scope="col" style="background-color: black;">Ticket ID</th>
+		      <th scope="col" style="background-color: black;">Ticket Issue</th>
+		      <th scope="col" style="background-color: black;">Ticket Response</th>
 		    </tr>
 		  
 		 
@@ -67,15 +88,19 @@
 		?>
 		
 		</table>
+	</div>
+	</div>
 
 	</section>
 	<section>
-		<form method='POST' action="<?php echo $_SERVER['PHP_SELF']; ?>">
-			<label for="ticket">Ticket to be issued:</label>
-			<textarea name="query" id="query" cols="30" rows="10"></textarea>
+		<div class="container" style="padding-bottom: 40px;">
+		<form method='POST' action="<?php echo $_SERVER['PHP_SELF']; ?>" style="text-align: center;">
+			<label for="ticket" style="font-weight: 600; font-size: 20px;">Ticket to be issued:</label>
+			<textarea name="query" id="query" cols="30" rows="10" class="form-control issuebtnn"></textarea>
 			
-			<button class="btn btn-danger">Issue</button>
+			<button class="btn issuebtn">Issue</button>
 		</form>
+	</div>
 	</section>
 	<?php include("footer.php"); ?>
 </body>

@@ -16,22 +16,8 @@
   <title>Menu | Head Over Meals</title>
   <?php include('head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/popup.css">
-  <script type="text/javascript">
- function myfunction() {
-   $('.button').click(function(){
-  var buttonId = $(this).attr('id');
-  $('#modal-container').removeAttr('class').addClass(buttonId);
-  $('body').addClass('modal-active');
-});
-
-$('#modal-container').click(function(){
-  $(this).addClass('out');
-  $('body').removeClass('modal-active');
-});
- }
-</script>
 </head>
-<body style="background-color: #e7e7e7;" onload="myfunction()">
+<body>
 <div class="scoket">
 <img src="img/preloader.svg" alt="" />
 </div>
