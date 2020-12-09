@@ -4,7 +4,7 @@
         echo "Connection Error: " . mysqli_connect_error();
     } 
 
-$id = $_GET['fid']; // get id through query string
+$id = $_GET['f_id']; // get id through query string
 
  $query="DELETE FROM food where f_id = '$id'";
  $update=mysqli_query($conn, $query);

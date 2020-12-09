@@ -61,19 +61,11 @@
                                                 <td>{$food['f_price']}</td>
                                                 <td>{$food['cat_id']}</td>
                                                 <td>{$food['image']}</td>";
-                                                print '<td><a href="delete.php?id=<?php echo $food[\'fid\'];?>" id="delete-btn">Delete</a></td>
+                                                print '<td><a href="delete.php?id=<?php echo $foods[\'f_id\'];?>" id="delete-btn">Delete</a></td>
                                             </tr>';
                                             }
 
                                         ?>
-
-                                        <script type="text/javascript">
-                                            $(document).ready(function() {
-                                            $("#delete-btn").click(function() {
-
-                                                }
-                                            }
-                                        </script>
                                                   
                                     </tbody>
 
