@@ -16,7 +16,7 @@
         <a class="nav-link" href="menu.php">MENU</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="blog.php">BLOG</a>
+        <a class="nav-link" href="recipie.php">RECIPIES</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
