@@ -17,7 +17,7 @@
   <?php include('head.php'); ?>
   <link rel="stylesheet" type="text/css" href="css/popup.css">
 </head>
-<body>
+<body">
 <div class="scoket">
 <img src="img/preloader.svg" alt="" />
 </div>
@@ -60,7 +60,7 @@
 </div>
 </div>
 <!--------------Menu--------------->
-<div class="row menu-items2 content" style="background-color: #e7e7e7">
+<div class="row menu-items2 content" style="background-color: #ebebeb">
   <?php 
     $query="SELECT * FROM food INNER JOIN category ON food.cat_id=category.cat_id";
 
