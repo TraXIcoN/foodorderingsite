@@ -47,7 +47,7 @@
                                                 <td>{$row['d_id']}</td>
                                                 <td>{$row['o_id']}</td>
                                                 <form id=\"modify-entry-form-delivery\" 
-                                                action=\"modify-delivery.php\" method=\"POST\">
+                                                action=\"modify-delivery.php?did={$row['d_id']}\" method=\"POST\">
                                                 <td><input style=\"width: 150px;\" name=\"aname\"
                                                 value=\"{$row['agent_name']}\"></td>
                                                 <td><input style=\"width: 160px;\" name=\"anumber\"
