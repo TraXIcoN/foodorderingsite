@@ -355,5 +355,6 @@
                   window.history.replaceState( null, null, window.location.href );
 }
 </script>
+<?php include('includes/scripts.php'); ?>
 </body>
 </html>

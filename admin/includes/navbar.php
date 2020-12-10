@@ -42,7 +42,7 @@
   
 
           <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #ca0000;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin-index.php">
@@ -128,7 +128,7 @@
                     <span>Orders Table</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reviews.php">
+                <a class="nav-link" href="review.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Reviews Table</span></a>
             </li>
