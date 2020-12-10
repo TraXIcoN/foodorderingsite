@@ -18,7 +18,7 @@
     include('includes/navbar.php');
 ?>
 	<div class="container-fluid">
-
+<?php include('includes/topbar.php'); ?>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4" style="margin-top: 30px;">
                         <div class="card-header py-3">
