@@ -6,14 +6,8 @@
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Delivery Table</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
-	<?php 
+
+<?php 
     include('includes/header.php');
     include('includes/navbar.php');
 ?>
@@ -68,5 +62,6 @@
 
 
                 </div>
+<?php include('includes/scripts.php'); ?>
 </body>
 </html>

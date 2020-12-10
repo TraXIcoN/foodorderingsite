@@ -259,6 +259,7 @@
 
             </div>
             <!-- End of Main Content -->
+<?php include('includes/scripts.php'); ?>
 
 </body>
 </html>
