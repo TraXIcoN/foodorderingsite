@@ -18,7 +18,7 @@
     include('includes/navbar.php');
 ?>
 	<div class="container-fluid">
-
+<?php include('includes/topbar.php'); ?>
                     
 
                     <!-- DataTables Example -->
