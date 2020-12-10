@@ -34,6 +34,7 @@
                                             <th>Query</th>
                                             <th>Response</th>
                                             <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     
@@ -48,12 +49,16 @@
 
                                             foreach($tickets as $ticket) {
                                                 echo "<tr>
-                                                <td>{$ticket['c_id']}</td>
+                                                <td style=\"width: 50px;\">{$ticket['c_id']}</td>
                                                 <td>{$ticket['ticket_id']}</td>
                                                 <td>{$ticket['ticket_query']}</td>
-                                                <td>{$ticket['ticket_response']}</td>";
-                                                echo "<td><a href='delete-tickets.php?
-                                                      t_id=$ticket[ticket_id]'>Delete</a></td>
+                                                <form id=\"modify-entry-form-tickets\" 
+                                                action=\"modify-tickets.php?t_id=$ticket[ticket_id]\" 
+                                                method=\"POST\">
+                                                <td><input style=\"width: auto;\" name=\"tresponse\"value=\"{$ticket['ticket_response']}\"></td>";                                    
+                                                echo "<td style=\"text-align: center;\"><button class=\"btn btn-dark\" type=\"submit\">Edit</button></td>
+                                                </form>";
+                                                echo "<td style=\"text-align: center;\"><a href='delete-tickets.php?t_id=$ticket[ticket_id]'>Delete</a></td>
                                                 </tr>";
                                             }
 

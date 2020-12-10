@@ -56,8 +56,10 @@
                                             
                 foreach($foods as $food) {
                     echo "<form id=\"modify-entry-form-food\" action=\"modify-food.php\"  method=\"POST\">
-                    <input style=\"width=\"30px\";\" type=\"hidden\" name='f_id' value=\"{$food['f_id']}\"><tr>
-                    <td style=\"width=\"30px\";\" id=\"foodid\"><input style=\"width: 40px;\" name=\"foodid\" value=\"{$food['f_id']}\" disabled></td>
+                    <input style=\"width=\"30px\";\" type=\"hidden\" name='f_id' value=\"{$food['f_id']}\">
+                    <tr>
+                    <td style=\"width=\"30px\";\" id=\"foodid\"><input style=\"width: 40px;\" name=\"foodid\" 
+                    value=\"{$food['f_id']}\" disabled></td>
                     <td id=\"foodname\"  contenteditable=\"true\">
                     <input name=\"foodname\" value=\"{$food['f_name']}\"></td>
                     <td id=\"fooddesc\">
