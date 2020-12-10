@@ -127,6 +127,26 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Orders Table</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="reviews.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Reviews Table</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="order_details.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Order Details Table</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="payment.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Payments Table</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="delivery.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Delivery Table</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
