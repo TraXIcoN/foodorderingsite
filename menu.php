@@ -41,7 +41,7 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<div class="page-header wow fadeInDown">
+<div class="page-header wow fadeInDown" id="formsubmenu">
 <h1><small>These fine folks trusted the award winning restaurant.</small></h1>
 </div>
 </div>
@@ -60,7 +60,7 @@
 </div>
 </div>
 <!--------------Menu--------------->
-<div class="row menu-items2 content">
+<div class="row menu-items2 content" style="background-color: #e7e7e7">
   <?php 
     $query="SELECT * FROM food INNER JOIN category ON food.cat_id=category.cat_id";
 
@@ -70,7 +70,7 @@
         $food = mysqli_fetch_all($result, MYSQLI_ASSOC);
         //print_r($food);
         foreach($food as $f) {
-          echo '<form method="POST" action=" ">';
+          echo '<form method="POST" action="#formsubmenu">';
           echo '<div class="menu-item2 col-sm-6 col-xs-12 col-md-4 '.$f['cat_name'].' clearfix">';
           echo'<div class="menu-info buttons">';
 
@@ -85,7 +85,7 @@
           echo'</div>';
           echo'</a>';
           echo'</div>';
-          echo'<button type="submit" class="menu-more">+</button>';
+          echo'<button type="submit" class="menu-more" id="btnsubmenu">+</button>';
           
           echo'</div>';
           echo '</form>';
