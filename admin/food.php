@@ -22,7 +22,7 @@
                     
 
                     <!-- DataTables Example -->
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4" style="margin-top: 30px;">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Food</h6>
                         </div>
@@ -55,19 +55,19 @@
 
                                             
                 foreach($foods as $food) {
-                    echo "<form id=\"modify-entry-form\" action=\"modify-food.php\"  method=\"POST\">
+                    echo "<form id=\"modify-entry-form-food\" action=\"modify-food.php\"  method=\"POST\">
                     <input style=\"width=\"30px\";\" type=\"hidden\" name='f_id' value=\"{$food['f_id']}\"><tr>
-                    <td style=\"width=\"30px\";\" id=\"foodid\"><input  name=\"foodid\" value=\"{$food['f_id']}\" disabled></td>
+                    <td style=\"width=\"30px\";\" id=\"foodid\"><input style=\"width: 40px;\" name=\"foodid\" value=\"{$food['f_id']}\" disabled></td>
                     <td id=\"foodname\"  contenteditable=\"true\">
                     <input name=\"foodname\" value=\"{$food['f_name']}\"></td>
                     <td id=\"fooddesc\">
                     <input  name=\"fooddesc\"value=\"{$food['f_description']}\"></td>
                     <td id=\"foodspecial\">
-                    <input  name=\"foodspecial\"value=\"{$food['f_special']}\"></td>
+                    <input style=\"width: 40px;\" name=\"foodspecial\"value=\"{$food['f_special']}\"></td>
                     <td id=\"foodprice\">
-                    <input  name=\"foodprice\"value=\"{$food['f_price']}\"></td>
+                    <input style=\"width: 50px;\" name=\"foodprice\"value=\"{$food['f_price']}\"></td>
                     <td id=\"categoryid\">
-                    <input  name=\"categoryid\"value=\"{$food['cat_id']}\"></td>
+                    <input style=\"width: 40px;\" name=\"categoryid\"value=\"{$food['cat_id']}\"></td>
                     <td id=\"foodimage\">
                     <input  name=\"foodimage\"value=\"{$food['image']}\"></td>";
                     echo "<td><button class=\"btn btn-dark\" type=\"submit\">Edit</button></td>";
@@ -87,8 +87,8 @@
 
                         <script>
                             function submitFormmodify() {
-                            document.getElementById("modify-entry-form").submit();
-                            document.getElementById("modify-entry-form").reset();
+                            document.getElementById("modify-entry-form-food").submit();
+                            document.getElementById("modify-entry-form-food").reset();
                             }
                         </script>
 

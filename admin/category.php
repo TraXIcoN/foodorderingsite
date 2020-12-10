@@ -22,7 +22,7 @@
                     
 
                     <!-- DataTables Example -->
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4" style="margin-top: 30px;">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Category</h6>
                         </div>
@@ -48,9 +48,9 @@
 
                                             foreach($category as $c) {
                                                 echo "<tr>
-                                                <td>{$c['cat_id']}</td>
+                                                <td style=\"width: 80px;\">{$c['cat_id']}</td>
                                                 <td>{$c['cat_name']}</td>";
-                                                echo "<td><a href='delete-cat.php?c_id=$c[cat_id]'>Delete</a></td>
+                                                echo "<td style=\"text-align: center; width: 150px;\"><a href='delete-cat.php?c_id=$c[cat_id]'>Delete</a></td>
                                                 </tr>";
                                             }
 
