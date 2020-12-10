@@ -202,7 +202,7 @@
 
     <div class="container-fluid resize" id="img_container">
         <div class="hero-image">
-            <img class="caro-img"  src="images/caro21.jpg">
+            <img class="caro-img"  src="images/caro21.jpg" style="padding-top: 45px;">
             <div class="hero-text">
             <h1 style="font-size:50px; color: white;">ORDER FOOD NOW!</h1>
             <?php if(!isset($_SESSION['logged'])) { 
