@@ -96,8 +96,8 @@
 		<div class="container" style="padding-bottom: 40px; padding-top: 40px;">
 		<form method='POST' action="<?php echo $_SERVER['PHP_SELF']; ?>">
 			<label for="ticket" style="font-weight: 600; font-size: 20px;">Ticket to be issued:</label>
-			<textarea name="query" id="query" cols="30" rows="10" class="issuebtnn"></textarea>
-			
+			<textarea name="query" id="query" cols="50" rows="5" class="issuebtnn"></textarea>
+			<br>
 			<button class="btn issuebtn">Issue</button>
 		</form>
 	</div>
