@@ -16,7 +16,7 @@
 ?>
 
 		<!-- DataTales Example -->
-	    <div class="card shadow mb-4">
+	    <div class="card shadow mb-4" style="margin-top: 30px;">
 	        <div class="card-header py-3">
 	            <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
 	        </div>
@@ -53,11 +53,15 @@
 	                                <td>{$order['o_id']}</td>
 	                                <td>{$order['c_fname']} {$order['c_lname']}</td>
 	                                <td>{$order['o_price']}</td>
-	                                <td>{$order['o_no_of_items']}</td>
-	                                <td>{$order['o_status']}</td>
+	                                <td style=\"width: 80px;\">{$order['o_no_of_items']}</td>
+	                                <form id=\"modify-entry-form-orders\" action=\"modify-orders.php\" 
+	                                method=\"POST\">
+	                                <td><input style=\"width: 100px;\" name=\"ostatus\"value=\"{$order['o_status']}\"></td></td>
 	                                <td>{$order['o_time']}</td>
 	                                <td>{$order['o_address']}</td>
-	                                <td>{$order['o_special_notes']}</td>";
+	                                <td style=\"width: 40px;\">{$order['o_special_notes']}</td>";
+	                                echo "<td><button class=\"btn btn-dark\" type=\"submit\">Edit</button></td>
+	                                </form>";
 	                                echo "<td><a href='delete-orders.php?
 	                                      o_id=$order[o_id]'>Delete</a></td>
 	                                </tr>";
