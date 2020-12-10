@@ -26,7 +26,7 @@
 	                    <thead>
 	                        <tr>
 	                            <th>Order ID</th>
-	                            <th>Customer ID</th>
+	                            <th>Customer Name</th>
 	                            <th>Order Price</th>
 	                            <th>Order No. of Items</th>
 	                            <th>Order Status</th>
@@ -40,7 +40,9 @@
 	                    <tbody>
 	                        <?php 
 
-	                            $query="SELECT * from orders";
+	                            $query="SELECT * from orders
+	                            INNER JOIN customer
+	                            ON orders.c_id=customer.c_id";
 	                            $result = mysqli_query($conn, $query);
 
 	                            // fetch the resulting rows as an array
@@ -49,7 +51,7 @@
 	                            foreach($orders as $order) {
 	                                echo "<tr>
 	                                <td>{$order['o_id']}</td>
-	                                <td>{$order['c_id']}</td>
+	                                <td>{$order['c_fname']} {$order['c_lname']}</td>
 	                                <td>{$order['o_price']}</td>
 	                                <td>{$order['o_no_of_items']}</td>
 	                                <td>{$order['o_status']}</td>
