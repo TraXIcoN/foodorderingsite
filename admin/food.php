@@ -55,8 +55,8 @@
 
                                             
                 foreach($foods as $food) {
-                    echo "<form action=\"food.php\"  method=\"post\">
-                    <tr>
+                    echo "<form id=\"modify-entry-form\" action=\"modify-food.php\"  method=\"POST\">
+                    <input type=\"hidden\" name='f_id' value=\"{$food['f_id']}\"><tr>
                     <td id=\"foodid\"><input name=\"foodid\" value=\"{$food['f_id']}\" disabled></td>
                     <td id=\"foodname\"  contenteditable=\"true\">
                     <input name=\"foodname\" value=\"{$food['f_name']}\"></td>
@@ -70,21 +70,33 @@
                     <input  name=\"categoryid\"value=\"{$food['cat_id']}\"></td>
                     <td id=\"foodimage\">
                     <input  name=\"foodimage\"value=\"{$food['image']}\"></td>";
-                    //echo "<td><a type=\"submit\" href='modify.php?ff_id=$food[f_id]'>Edit</a></td>";
+                    echo "<td><button class=\"btn btn-dark\" type=\"submit\">Edit</button></td>";
                     echo "<td><a href='delete-food.php?ff_id=$food[f_id]'>Delete</a></td>
+                     
+                </form>
+
                 </tr>";
-                }
-                echo "<tr style=\"border=0;\"><td><input type=\"submit\" class=\"btn btn-dark ml-lg-3\" value=\"Submit\"></td></tr> 
-                </form>";
-
                 
+                }
+                                
 
-                                        ?>
+                         ?>
 
 
-                                        <!-- Code for modifying current entries and saving to db -->
-                        <?php 
+                         <!-- Function for submitting form -->
+
+                        <script>
+                            function submitFormmodify() {
+                            document.getElementById("modify-entry-form").submit();
+                            document.getElementById("modify-entry-form").reset();
+                            }
+                        </script>
+
+
+                        <!-- Code for modifying current entries and saving to db 
+                        <?php /*
                             if($_SERVER["REQUEST_METHOD"]=='POST'){
+                                $foodid=$_POST['f_id'];
                                 $foodname=$_POST['foodname'];
                                 $foodprice=$_POST['foodprice'];
                                 $fooddesc=$_POST['fooddesc'];
@@ -93,14 +105,13 @@
                                 $categoryid=$_POST['categoryid'];
                                 
                                 
-                                $query="INSERT INTO food (  f_name,
-                                                                f_price,
-                                                                f_description,
-                                                                f_special,
-                                                                cat_id,
-                                                                image)
-                                VALUES('{$foodname}', {$foodprice}, '{$fooddesc}', {$foodspecial}, {$categoryid}, '{$foodimage}')
-                                 ";
+                                $query="UPDATE food 
+                                SET f_name = '{$foodname}', f_price = {$foodprice},
+                                                                f_description = '{$fooddesc}',
+                                                                f_special = {$foodspecial},
+                                                                cat_id = {$categoryid},
+                                                                image = '{$foodimage}'
+                                WHERE f_id = {$foodid}";
                                 $update=mysqli_query($conn, $query);
                                 echo "<meta http-equiv='refresh' content='0'>";
                                 if(!$update) {
@@ -109,11 +120,12 @@
 
                                 }
 
-                        ?>
+                       */ ?>  -->
 
 
 
-
+                                    <!-- Use script to modify table -->
+                                    
                                         <!---<script type="text/javascript">
                                             var fname = document.getElementById("foodname");
                                             var fnamevalue = fname.value;
@@ -181,13 +193,24 @@
                                     <input type="text" name="fimage" style="width: 80px;" id="food-item-entered"
                                     class="" placeholder="Img Path">
 
-                                    <input type="submit" class="btn btn-dark ml-lg-3" value="Submit">
+                                    <input type="button" onclick="submitForm()" id="submit-add-entry" class="btn btn-dark ml-lg-3" value="Submit">
                                 </form>
                                 </div>
                             </td>
                         </tr>
 
-                        
+
+                        <!-- Function for submitting form -->
+
+                        <script>
+                            function submitForm() {
+                            document.getElementById("add-entry-form0").submit();
+                            document.getElementById("add-entry-form0").reset();
+                            }
+                        </script>
+
+
+    
                         <!-- Code for adding new entries to the db -->
                         <?php 
                             if($_SERVER["REQUEST_METHOD"]=='POST'){
@@ -215,6 +238,9 @@
                                 }
 
                         ?>
+
+
+                       
 
 
 
