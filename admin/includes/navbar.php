@@ -68,7 +68,7 @@
             
 
            <!-- Heading -->
-            <div class="sidebar-heading" style="padding-left: 70px;">
+            <div class="sidebar-heading">
                 Addons
             </div>
 
@@ -100,7 +100,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Heading -->
-            <div class="sidebar-heading" style="padding-top: 15px; padding-left: 70px;">
+            <div class="sidebar-heading" style="padding-top: 15px;">
                 Tables
             </div>
 
@@ -134,7 +134,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            
+
 
             
         </ul>

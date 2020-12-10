@@ -21,7 +21,7 @@
 
                     
 
-                    <!-- DataTales Example -->
+                    <!-- DataTables Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Food</h6>
@@ -53,22 +53,90 @@
                                             // fetch the resulting rows as an array
                                             $foods = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-                                            foreach($foods as $food) {
-                                                echo "<tr>
-                                                <td>{$food['f_id']}</td>
-                                                <td contenteditable=\"true\">{$food['f_name']}</td>
-                                                <td contenteditable=\"true\">{$food['f_description']}</td>
-                                                <td contenteditable=\"true\">{$food['f_special']}</td>
-                                                <td contenteditable=\"true\">{$food['f_price']}</td>
-                                                <td contenteditable=\"true\">{$food['cat_id']}</td>
-                                                <td contenteditable=\"true\">{$food['image']}</td>";
-                                                echo "<td><a href='modify.php?ff_id=$food[f_id]'>Edit</a></td>";
-                                                echo "<td><a href='delete-food.php?ff_id=$food[f_id]'>Delete</a></td>
-                                            </tr>";
+                                            
+                foreach($foods as $food) {
+                    echo "<form action=\"food.php\"  method=\"post\">
+                    <tr>
+                    <td id=\"foodid\"><input name=\"foodid\" value=\"{$food['f_id']}\" disabled></td>
+                    <td id=\"foodname\"  contenteditable=\"true\">
+                    <input name=\"foodname\" value=\"{$food['f_name']}\"></td>
+                    <td id=\"fooddesc\">
+                    <input  name=\"fooddesc\"value=\"{$food['f_description']}\"></td>
+                    <td id=\"foodspecial\">
+                    <input  name=\"foodspecial\"value=\"{$food['f_special']}\"></td>
+                    <td id=\"foodprice\">
+                    <input  name=\"foodprice\"value=\"{$food['f_price']}\"></td>
+                    <td id=\"categoryid\">
+                    <input  name=\"categoryid\"value=\"{$food['cat_id']}\"></td>
+                    <td id=\"foodimage\">
+                    <input  name=\"foodimage\"value=\"{$food['image']}\"></td>";
+                    //echo "<td><a type=\"submit\" href='modify.php?ff_id=$food[f_id]'>Edit</a></td>";
+                    echo "<td><a href='delete-food.php?ff_id=$food[f_id]'>Delete</a></td>
+                </tr>";
+                }
+                echo "<tr style=\"border=0;\"><td><input type=\"submit\" class=\"btn btn-dark ml-lg-3\" value=\"Submit\"></td></tr> 
+                </form>";
 
-                                            }
+                
 
                                         ?>
+
+
+                                        <!-- Code for modifying current entries and saving to db -->
+                        <?php 
+                            if($_SERVER["REQUEST_METHOD"]=='POST'){
+                                $foodname=$_POST['foodname'];
+                                $foodprice=$_POST['foodprice'];
+                                $fooddesc=$_POST['fooddesc'];
+                                $foodspecial=$_POST['foodspecial'];
+                                $foodimage=$_POST['foodimage'];
+                                $categoryid=$_POST['categoryid'];
+                                
+                                
+                                $query="INSERT INTO food (  f_name,
+                                                                f_price,
+                                                                f_description,
+                                                                f_special,
+                                                                cat_id,
+                                                                image)
+                                VALUES('{$foodname}', {$foodprice}, '{$fooddesc}', {$foodspecial}, {$categoryid}, '{$foodimage}')
+                                 ";
+                                $update=mysqli_query($conn, $query);
+                                echo "<meta http-equiv='refresh' content='0'>";
+                                if(!$update) {
+                                echo "ERROR WHILE INSERTING!";
+                                }
+
+                                }
+
+                        ?>
+
+
+
+
+                                        <!---<script type="text/javascript">
+                                            var fname = document.getElementById("foodname");
+                                            var fnamevalue = fname.value;
+                                            alert("fnamevalue");
+                                            var foodid = document.getElementById("foodid");
+                                            var fid = foodid.value;   
+                                            <?php   
+                                              /*  $fname=$_POST['fnamevalue'];
+
+                                                $query="INSERT INTO food (f_name)
+                                                        VALUES('{$fname}')
+                                                        WHERE f_id = fid";
+
+                                                $update=mysqli_query($conn, $query);
+                                echo "<meta http-equiv='refresh' content='0'>";
+                                if(!$update) {
+                                echo "ERROR WHILE INSERTING!";
+                                }   */
+
+                                
+                                            ?>
+
+                                        </script>  --->   
                                         
 
 
@@ -88,7 +156,7 @@
                         <tr>
                             <td style="display: flex;">
                                 <div class="add-entry-btn-for-inline-display">
-                                <button type="button" id="add-entry-button-food" class="btn btn-dark" style="margin-bottom: 100px;">
+                                <button type="button" id="add-entry-button-food" class="btn btn-dark" style="margin-bottom: 100px; margin-right: 20px;">
                                 Add an Entry</button>
                                 </div>
 
@@ -119,6 +187,8 @@
                             </td>
                         </tr>
 
+                        
+                        <!-- Code for adding new entries to the db -->
                         <?php 
                             if($_SERVER["REQUEST_METHOD"]=='POST'){
                                 $fname=$_POST['fname'];
@@ -145,6 +215,12 @@
                                 }
 
                         ?>
+
+
+
+                        
+
+
 
                        <!---  second and third entries --->
                         <!---
@@ -236,7 +312,7 @@
                      */   
                                           });
                                         });
-                                    </script>
+                                    </script>   
                                 </div>
                         </table>
 

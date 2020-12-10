@@ -1,4 +1,8 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin - Dashboard</title>
+   
     <?php 
     include('includes/header.php');
     include('includes/navbar.php');
