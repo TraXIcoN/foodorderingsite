@@ -89,9 +89,6 @@
                         <a class="collapse-item" href="../register.php">Register</a>
                         <a class="collapse-item" href="../forgot-password.php">Forgot Password</a>
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.php">404 Page</a>
-                        <a class="collapse-item" href="blank.php">Blank Page</a>
                     </div>
                 </div>
             </li>
@@ -124,6 +121,11 @@
                 <a class="nav-link" href="tickets.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tickets table</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="orders.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Orders Table</span></a>
             </li>
 
             <!-- Divider -->
@@ -159,7 +161,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="../logout.php">Logout</a>
                 </div>
             </div>
         </div>
