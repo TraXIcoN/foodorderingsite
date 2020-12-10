@@ -22,6 +22,40 @@
         }
 
         mysqli_close($conn);
+        require_once('PHPMailer-5.2-stable/PHPMailerAutoload.php');
+
+         
+         $mail = new PHPMailer();
+          $mail->IsSMTP(); 
+
+          $mail->CharSet="UTF-8";
+          $mail->Host = "smtp.gmail.com";
+          $mail->SMTPDebug = 1; 
+          $mail->Port = 465 ; //465 or 587
+
+           $mail->SMTPSecure = 'ssl';  
+          $mail->SMTPAuth = true; 
+          $mail->IsHTML(true);
+
+          //Authentication
+          $mail->Username = "headovermeals122@gmail.com";
+          $mail->Password = "headovermeals@123";
+
+          //Set Params
+          $mail->SetFrom("headovermeals122@gmail.com");
+          $mail->AddAddress("{$email}");
+          $mail->Subject = "Password has been changed!";
+          $message="<h4>Your Password for {$email} has been changed, if you have not changed it, please reply back to this mail.</h4>";
+          
+          
+          $mail->Body = $message;
+
+
+           if(!$mail->Send()) {
+              echo "Mailer Error: " . $mail->ErrorInfo;
+           } else {
+              echo "Message has been sent";
+           }
         header('Location: login.php');
     }
     else {
