@@ -10,27 +10,20 @@
                                 
 
                                 if($_SERVER["REQUEST_METHOD"]=='POST'){
-                            	$foodid=$_POST['f_id'];
-                                $foodname=$_POST['foodname'];
-                                $foodprice=$_POST['foodprice'];
-                                $fooddesc=$_POST['fooddesc'];
-                                $foodspecial=$_POST['foodspecial'];
-                                $foodimage=$_POST['foodimage'];
-                                $categoryid=$_POST['categoryid'];
-                                
-                                echo "$foodname";
-                                
-                                $query="UPDATE food 
-                                SET f_name = '{$foodname}', f_price = {$foodprice},
-                                                                f_description = '{$fooddesc}',
-                                                                f_special = {$foodspecial},
-                                                                cat_id = {$categoryid},
-                                                                image = '{$foodimage}'   
-                                WHERE f_id = {$foodid}";
+                                $did=$_GET['did'];
+                                $dname=$_POST['aname'];
+                                $dnumber=$_POST['anumber'];
+                                              
+                                $query="UPDATE delivery 
+                                SET agent_name = '{$dname}',
+                                    agent_number = '{$dnumber}'   
+                                WHERE d_id = {$did}";
                                 $update=mysqli_query($conn, $query);
                                 echo "<meta http-equiv='refresh' content='0'>";
+                               
+
                                 if(!$update) {
-                                echo "ERROR WHILE INSERTING!";
+                                echo "ERROR WHILE UPDATING!";
                                 }
                             }
 
