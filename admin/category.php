@@ -34,6 +34,7 @@
                                             <th>ID</th>
                                             <th>Category Name</th>
                                             <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     
@@ -49,8 +50,15 @@
                                             foreach($category as $c) {
                                                 echo "<tr>
                                                 <td style=\"width: 80px;\">{$c['cat_id']}</td>
-                                                <td>{$c['cat_name']}</td>";
-                                                echo "<td style=\"text-align: center; width: 150px;\"><a href='delete-cat.php?c_id=$c[cat_id]'>Delete</a></td>
+                                                <form id=\"modify-entry-form-category\" 
+                                                action=\"modify-category.php?c_id=$c[cat_id]\" method=\"POST\">
+                                                <td><input style=\"width: auto;\" name=\"cname\"
+                                                value=\"{$c['cat_name']}\"></td></td>";
+                                                echo "<td style=\"text-align: center; width: 150px;\">
+                                                <button class=\"btn btn-dark\" type=\"submit\">Edit</button></td>
+                                                </form>";
+                                                echo "<td style=\"text-align: center; width: 150px;\">
+                                                <a href='delete-cat.php?c_id=$c[cat_id]'>Delete</a></td>
                                                 </tr>";
                                             }
 

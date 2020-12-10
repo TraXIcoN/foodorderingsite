@@ -34,7 +34,7 @@
 	                            <th>Order Address</th>
 	                            <th>Special Notes</th>
 	                            <th></th>
-	                        </tr>
+                                </tr>
 	                    </thead>
 
 	                    <tbody>
@@ -54,16 +54,15 @@
 	                                <td>{$order['c_fname']} {$order['c_lname']}</td>
 	                                <td>{$order['o_price']}</td>
 	                                <td style=\"width: 80px;\">{$order['o_no_of_items']}</td>
-	                                <form id=\"modify-entry-form-orders\" action=\"modify-orders.php\" 
-	                                method=\"POST\">
-	                                <td><input style=\"width: 100px;\" name=\"ostatus\"value=\"{$order['o_status']}\"></td></td>
+	                                <form id=\"modify-entry-form-orders\" 
+	                                action=\"modify-orders.php?o_id=$order[o_id]\" method=\"POST\">
+	                                <td><input style=\"width: 100px;\" name=\"ostatus\"
+	                                value=\"{$order['o_status']}\"></td>
 	                                <td>{$order['o_time']}</td>
 	                                <td>{$order['o_address']}</td>
 	                                <td style=\"width: 40px;\">{$order['o_special_notes']}</td>";
 	                                echo "<td><button class=\"btn btn-dark\" type=\"submit\">Edit</button></td>
-	                                </form>";
-	                                echo "<td><a href='delete-orders.php?
-	                                      o_id=$order[o_id]'>Delete</a></td>
+	                                </form>
 	                                </tr>";
 	                            }
 
