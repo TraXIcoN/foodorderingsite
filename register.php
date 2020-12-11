@@ -131,7 +131,7 @@
         
         if(password.value.length<6) {
             
-            document.getElementById("password1").innerHTML="<p style='color: black;font-size: 16px;margin-top: -10px;'>*Password must be more than 6 characters.</p>";
+            document.getElementById("password1").innerHTML="<p style='display: block; color: black;font-size: 16px;margin-top: -10px;'>*Password must be more than 6 characters.</p>";
             return false;
         }
         else {
@@ -143,7 +143,7 @@
         
         if(password2.value != password.value) {
             
-            document.getElementById("password22").innerHTML="<p style='color: black;font-size: 16px;margin-top: -10px;'>*The passwords do not match.</p>";
+            document.getElementById("password22").innerHTML="<p style='display: block; color: black;font-size: 16px;margin-top: -10px;'>*The passwords do not match.</p>";
             return false;
         }
         else {
@@ -155,7 +155,7 @@
         const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if(!re.test(email.value)) {
             
-            document.getElementById("emailvalid").innerHTML="<p style='color: black;font-size: 16px;margin-top: -10px;'>*Please give a valid email address!.</p>";
+            document.getElementById("emailvalid").innerHTML="<p style='display: block; color: black;font-size: 16px;margin-top: -10px;'>*Please give a valid email address!.</p>";
             return false;
         }
         else {
@@ -167,7 +167,7 @@
         
         if(pno.value.length!=10) {
             
-            document.getElementById("nump").innerHTML="<p style='color: black;font-size: 16px;margin-top: -10px;'>*The Ph no. should be of 10 digits.</p>";
+            document.getElementById("nump").innerHTML="<p style='display: block; color: black;font-size: 16px;margin-top: -10px;'>*The Ph no. should be of 10 digits.</p>";
             return false;
         }
         else {
